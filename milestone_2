@@ -1,0 +1,28 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+	
+	<!-- This page answers questions to assignment "milestone" 2 for GEOG485L at UNM -->
+	
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<title>Geography 485L Milestone 2</title>
+	</head>
+	<body>
+	<p>
+	Elisa Cedillos<br>
+	January 29, 2014
+	</p>
+	<h1>Lab Assignment #2</h1>
+	<h2>Question 1: From examining the display in your web browser and the structure of the source code in the page, what effect (if any) does the white space (i.e. tabs, blank lines, multiple spaces) have on what is displayed in the browser?</h2>
+	<p>answer ...</p>
+	<h2>Question 2:  How are the
+
+    <h1>
+and
+
+    <h2> 
+elements from the source code displayed differently in the browser?</h2>
+	<p>answer ...</p>
+	<h2>Question 3: What type of element would you use to create additional list elements in either the “topic” or “data type” lists on the page.</h2>
+	<p>answer ...</p>
+	</body>
+</html>
