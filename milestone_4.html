@@ -1,72 +1,77 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-
-	<head>
-		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-		<title>ezxile - GEOE485L</title>
-		<style type="text/css">
-			body{
-
-			font-family: Lucidia Grande, Lucida Sans Unicode, Arial, Helvetica, sans-serif;
-			color: #3f3f3f;
-			font-size: 12px;
-			background-color: #fff
-			line-height: 5px;
-			}
-			a { 
-			color: #08c; }
-			a:link, a:visited, a:active { text-decoration: none; }
-			a:hover { text-decoration: underline; }
-			a.block { display: block; }
-			a.block span,
-			a.block em { color:#08c; }
-			a.block:hover { text-decoration: none; }
-			a.block:hover span,
-			a.block:hover em { color: #08c; text-decoration: underline; }
-
-			h1 { 
-			font-size: 24px; line-height: 36px; }
-			h2 { 
-			font-size: 16px; }
-			li { 
-			list-style-type: none;}
-		</style>
-	</head>
-	<body>
-		<h1>Geography 485L Home Page</h1>
-		<p>My name is Elisa Cedillos and I am studying Geography at the University of New Mexico.</p>
-		<p>I am taking a web mapping class to create innovative ways for users to interact with data and maps.</p>
-
-
-		<h2>Topics I'm interested in:</h2>
-		<ul>
-			<li>New Mexico landscapes</li>
-			<li>GIS</li>
-			<li>Graphic Design</li>
-			<li>Urban Geography</li>
-			<li>Sustainability
-		</ul>
-
-		<h2>Types of data I have worked with:</h2>
-		<ul>
-			<li>shapefiles</li>
-			<li>.kml files</li>
-			<li>.xml files</li>
-			<li>Adobe InDesign files</li>
-		</ul>
-
-		<h2>Milestones:</h2>
-		<ol>
-			<li><a href="../GEOG485/milestone_1.html">Milestone 1</a></li>
-			<li><a href="../GEOG485/milestone_2.html">Milestone 2</a></li>
-			<li><a href="../GEOG485/milestone_3.html">Milestone 3</a></li>
-			<li><a href="../GEOG485/milestone_4.html">Milestone 4</a></li>
-		<!--	<li><a href="../GEOG485L/milestone_5.html">Milestone 5</a></li> -->
-		</ol>
-		<h2>Deep Dives:</h2>
-		<ol>
-			<li><a href="">Deep Dive 1</a></li>
-		<ol>
-	</body>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>Geography 485L - Milestone 4</title>
+    <style type="text/css">
+        html { height: 100% }
+        body { height: 100%;
+                color: #FFFFFF;
+                  background: #737373;
+                    margin-left: 5%;
+                      margin-right: 5%;
+                        font-family: Helvetica, sans-serif;
+                          text-align: center}
+        #map_canvas { width: 90%;
+                        height:80%;
+                          margin-left: auto;
+                            margin-right: auto }
+</style>
+<script type="text/javascript"
+    src="http://maps.google.com/maps/api/js?sensor=false">
+</script>
+<script type="text/javascript">
+  function initialize() {
+    var ReservationWaterTower = new google.maps.LatLng(35.244414,-106.567711)
+      var myOptions = {
+            zoom: 11,
+              center: ReservationWaterTower,
+                mapTypeId: google.maps.MapTypeId.ROAD,
+      styles:[
+  {
+    "featureType": "road.arterial",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      { "visibility": "on" },
+      { "color": "#808080" },
+      { "weight": 2 }
+    ]
+  },{
+    "featureType": "poi.school",
+    "stylers": [
+      { "visibility": "on" },
+      { "hue": "#ff0000" },
+      { "weight": 8 },
+      { "saturation": 100 }
+    ]
+  },{
+    "featureType": "road.highway.controlled_access",
+    "elementType": "geometry.fill",
+    "stylers": [
+      { "visibility": "on" },
+      { "weight": 4 }
+    ]
+  },{
+  }
+]
+    };
+        var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions); }
+</script>
+</head>
+<body onload="initialize()">
+	<p>
+    <br>
+    Lawrence Alderete<br>
+  	12 February 2014
+	  </p>
+  <h1>Milestone 4</h1>
+  <div id="map_canvas"></div>
+</body>
+<br>
+<br>
+<br>
 </html>
+
+
