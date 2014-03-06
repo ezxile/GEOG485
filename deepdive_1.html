@@ -83,18 +83,19 @@
   }
 ]
     };
-	var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions); 
-    var ParkOfficeMarker = new google.maps.marker ({
-    	position: ParkOffice,
-    	title: "Albuquerque Parks and Recreation Office"
-    	});
-    	ParkOfficeMarker.setMap (map);
-    	
-    var BioPark = new google.maps.marker ({
-    	position: BioPark,
-    	title: "Albuquerque BioPark Botanical Gardens"
-    	});
-    	BioPark.setMap (map);   
+	var map = new google.maps.Map(
+			  document.getElementById("map_canvas"), 
+			  myOptions);
+			var classroomMarker = new google.maps.Marker({
+			  position: classroom,
+			  title:"Geography 485L/585L Classroom, Bandelier East, Room 106"
+			  });
+			classroomMarker.setMap(map);
+			var officeMarker = new google.maps.Marker({
+			  position: office,
+			  title:"Office, Bandelier West, Room 107"
+			  });
+			officeMarker.setMap(map);   
     }
 </script>
 </head>
