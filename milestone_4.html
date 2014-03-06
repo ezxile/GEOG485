@@ -9,15 +9,15 @@
         html { height: 100% }
         body { height: 100%;
                 color: #FFFFFF;
-                  background: #737373;
-                    margin-left: 5%;
-                      margin-right: 5%;
-                        font-family: Helvetica, sans-serif;
-                          text-align: center}
+                background: #fff;
+        	    margin-left: 5%;
+	            margin-right: 5%;
+                font-family: Lucidia Grande, Lucida Sans Unicode, Arial, Helvetica, sans-serif;
+                text-align: center}
         #map_canvas { width: 90%;
-                        height:80%;
-                          margin-left: auto;
-                            margin-right: auto }
+                height:80%;
+                margin-left: auto;
+                margin-right: auto }
 </style>
 <script type="text/javascript"
     src="http://maps.google.com/maps/api/js?sensor=false">
@@ -26,32 +26,55 @@
   function initialize() {
     var ReservationWaterTower = new google.maps.LatLng(35.244414,-106.567711)
       var myOptions = {
-            zoom: 11,
-              center: ReservationWaterTower,
-                mapTypeId: google.maps.MapTypeId.ROAD,
+        zoom: 11,
+        center: ReservationWaterTower,
+        mapTypeId: google.maps.MapTypeId.ROAD,
       styles:[
   {
-    "featureType": "road.arterial",
-    "elementType": "geometry.stroke",
+    "featureType": "road.highway",
     "stylers": [
-      { "visibility": "on" },
-      { "color": "#808080" },
-      { "weight": 2 }
+      { "lightness": 35 },
+      { "weight": 0.8 },
+      { "saturation": -67 },
+      { "hue": "#ffa200" }
+    ]
+  },{
+    "featureType": "road.local",
+    "stylers": [
+      { "saturation": -100 },
+      { "lightness": 100 }
+    ]
+  },{
+    "featureType": "poi.park",
+    "stylers": [
+      { "hue": "#ff0008" },
+      { "saturation": 80 },
+      { "lightness": 14 }
+    ]
+  },{
+    "featureType": "water",
+    "elementType": "geometry",
+    "stylers": [
+      { "hue": "#00f6ff" },
+      { "lightness": -25 },
+      { "saturation": -75 }
     ]
   },{
     "featureType": "poi.school",
     "stylers": [
-      { "visibility": "on" },
-      { "hue": "#ff0000" },
-      { "weight": 8 },
-      { "saturation": 100 }
+      { "saturation": -43 }
     ]
   },{
-    "featureType": "road.highway.controlled_access",
-    "elementType": "geometry.fill",
+    "featureType": "poi.business",
     "stylers": [
-      { "visibility": "on" },
-      { "weight": 4 }
+      { "saturation": -59 }
+    ]
+  },{
+    "featureType": "landscape.natural",
+    "stylers": [
+      { "hue": "#7700ff" },
+      { "lightness": -11 },
+      { "saturation": -43 }
     ]
   },{
   }
@@ -63,10 +86,11 @@
 <body onload="initialize()">
 	<p>
     <br>
-    Lawrence Alderete<br>
+    Elisa Cedillos<br>
   	12 February 2014
 	  </p>
   <h1>Milestone 4</h1>
+  <h2>Parks in Albuquerque</h2>
   <div id="map_canvas"></div>
 </body>
 <br>
