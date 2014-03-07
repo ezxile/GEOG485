@@ -18,21 +18,21 @@
                 height:80%;
                 margin-left: auto;
                 margin-right: auto }
-</style>
-<script type="text/javascript"
+		</style>
+	<script type="text/javascript"
     src="http://maps.google.com/maps/api/js?sensor=false">
-</script>
-<script type="text/javascript">
-  function initialize() {
+	</script>
+	<script type="text/javascript">
+  	function initialize() {
     
-    var MapCenter = new google.maps.LatLng(35.1136885,-106.5950772)
-    var ParkOffice = new google.maps.LatLng(35.101108,-106.648783)
-    var BioPark = new google.maps.LatLng(35.0967548,-106.6837606)
-    var myOptions = {
-        zoom: 13,
-        center: MapCenter,
-        mapTypeId: google.maps.MapTypeId.ROAD,
-      	styles:[
+    	var MapCenter = new google.maps.LatLng(35.1136885,-106.5950772)
+    	var ParkOffice = new google.maps.LatLng(35.101108,-106.648783)
+    	var BioPark = new google.maps.LatLng(35.0967548,-106.6837606)
+    	var myOptions = {
+        	zoom: 13,
+        	center: MapCenter,
+       		mapTypeId: google.maps.MapTypeId.ROAD,
+      		styles:[
   {
     "featureType": "road.highway",
     "stylers": [
@@ -85,22 +85,22 @@
 
 ]
     };
-	var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions); 
-    var ParkOfficeMarker = new google.maps.marker ({
-    	position: ParkOffice,
-    	title: "Albuquerque Parks and Recreation Office"
+		var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions); 
+    	var ParkOfficeMarker = new google.maps.marker ({
+    		position: ParkOffice,
+    		title: "Albuquerque Parks and Recreation Office"
     	});
-    	ParkOfficeMarker.setMap(map);
+    		ParkOfficeMarker.setMap(map);
     	
-    var BioPark = new google.maps.marker ({
-    	position: BioPark,
-    	title: "Albuquerque BioPark Botanical Gardens"
+    	var BioPark = new google.maps.marker ({
+    		position: BioPark,
+    		title: "Albuquerque BioPark Botanical Gardens"
     	});
-    	BioParkMarker.setMap(map);   
+    		BioParkMarker.setMap(map);   
     }
-</script>
-</head>
-<body onload="initialize()">
+	</script>
+	</head>
+	<body onload="initialize()">
 	<p>
     <br>
     Elisa Cedillos<br>
@@ -109,8 +109,5 @@
   <h1>Deep Dive 1</h1>
   <h2>Parks in Albuquerque</h2>
   <div id="map_canvas"></div>
-</body>
-<br>
-<br>
-<br>
+	</body>
 </html>

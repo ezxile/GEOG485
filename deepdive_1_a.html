@@ -1,34 +1,34 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<title> Deep Dive 1</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	</head>
 		<style type="text/css">
-		  html { height: 100% }
-		  body { height: 100%; 
-				font-family: Lucidia Grande, Lucida Sans Unicode, Arial, Helvetica, sans-serif;
-				color: #3f3f3f;
-                background: #fff;
-        	    margin-left: 5%;
-	            margin-right: 5%;
-                text-align: center}
-		  #map_canvas { width:90%; 
-			height:80%; 
-			margin-left: auto; 
-			margin-right: auto }
-		  .infoBox { color:black }
+			body { height: 100%; 
+					font-family: Lucidia Grande, Lucida Sans Unicode, Arial, Helvetica, sans-serif;
+					color: #3f3f3f;
+                	background: #fff;
+        	    	margin-left: 5%;
+	           		margin-right: 5%;
+               		text-align: center}
+			#map_canvas { width:90%; 
+					height:80%; 
+					margin-left: auto; 
+					margin-right: auto }
+		  	.infoBox { color:black }
 		</style>
 		<script type="text/javascript"
 			src="http://maps.google.com/maps/api/js?sensor=false">
 		</script>
 		<script type="text/javascript">
 		  function initialize() {
-			var MapCenter = new google.maps.LatLng(35.1136885,-106.5950772)
-			var ParkOffice = new google.maps.LatLng(35.101108,-106.648783)
-			var BioPark = new google.maps.LatLng(35.0967548,-106.6837606)
-			var myOptions = {
+			
+			var options = {
         			zoom: 13,
        				center: MapCenter,
-       				mapTypeId: google.maps.MapTypeId.ROAD
-       			styles:[
+       				mapTypeId: google.maps.MapTypeId.ROADMAP
+       				styles:[
   {
     "featureType": "road.highway",
     "stylers": [
@@ -81,19 +81,23 @@
 ]
 
 			  };	
-			var map = new google.maps.Map(
-			  document.getElementById("map_canvas"), 
-			  myOptions);}
+			var map = new google.maps.Map(document.getElementById("map_canvas"), Options)
+			
+			;}
+			
+			var MapCenter = new google.maps.LatLng(35.1136885,-106.5950772)
+			var ParkOffice = new google.maps.LatLng(35.101108,-106.648783)
+			var BioPark = new google.maps.LatLng(35.0967548,-106.6837606)
 			var ParkOfficeMarker = new google.maps.Marker({
 			  position: ParkOffice,
+			  map: map_canvas,
 			  title:"ABQ Parks and Rec"
 			  });
-			ParkOfficeMarker.setMap(map);
 			var BioParkMarker = new google.maps.Marker({
 			  position: BioPark,
+			  map: map_canvas,
 			  title:"ABQ Bio Park"
 			  });
-			BioParkMarker.setMap(map);
 			
 			 
 			var buildingCoordinates = [
@@ -129,11 +133,10 @@
 			  });
 		  }
 		</script>
-	</head>
-	
 	<body onload="initialize()">
 	  <h1>Deep Dive 1</h1>
 	  <div id="map_canvas"></div>
 	</body>
+</html>
 
 </html>
