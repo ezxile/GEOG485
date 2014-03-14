@@ -33,7 +33,20 @@
         		<br>(600px)/1.5 = 400px</p>
 	    <h2>Question 3</h2>
 	     	<h3>Formulate a WMS request that reflects the values determined in 1.1 and 1.2 above for the WMS service used above in the examples. Include both the actual WMS request and the returned map image.</h3>
-       			 <p></p>
-	
+       			 <p>WMS Request:
+       			 <br>http://gstore.unm.edu/apps/rgis/datasets/97810/services/ogc/wms?VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&BBOX=-107.2,34.7,-106,35.25&LAYERS=2007fe_35_county00&FORMAT=image/png&TRANSPARENT=TRUE&STYLES=&SRS=EPSG:4326&WIDTH=600&HEIGHT=275</p>
+       			 <br><img src="./m7_q_3.png"/>
+		<h2>Question 4</h2>
+			<h3>Formulate a WMS request for a 900x600 pixel map image that represents the full 3-degree width of the geographic region, and is based upon the minimum Y value of 34.5 degrees North Latitude. Include in your answer both the WMS request and the returned map image.</h3>
+				<p>WMS GetMap Request:
+				<br><i>http://raster.nationalmap.gov/ArcGIS/services/TNM_Large_Scale_Imagery/MapServer/WMSServer?VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&BBOX=-106.639,35.074,-106.609,35.094&LAYERS=0&WIDTH=600&HEIGHT=400&SRS=EPSG:4326&FORMAT=image/jpeg&STYLES=</i>
+				<br><img src="./m7_q_4.jpeg"/></p>
+		<h2>Question 5</h2>
+			<h3>Given a WMS that is represented by the following GetCapabilities request, formulate individual GetMap requests using the following parameters:
+			<br>BBOX=-106.639,35.074,-106.609,35.094 WIDTH=600 HEIGHT=400
+			<br>for each of the following layers: 0 (TNM_Large_Scale_Imagery) and 1 (1_foot_imagery) - yes - USGS just gave numbers as the layer names
+			<br><i>http://raster.nationalmap.gov/ArcGIS/services/TNM_Large_Scale_Imagery/MapServer/WMSServer?request=GetCapabilities&service=WMS</i></h3>
+				<p></p>
+			
 	</body>
 </html>
