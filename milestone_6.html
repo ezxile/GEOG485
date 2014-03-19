@@ -39,46 +39,58 @@
   	February 26 2014<br>
 	  <h1>Milestone 6</h1>
 	  		<h3>There are a large number of WMS services available on the web. One way to find interesting services is to search for them using standard search engines such as Google. Try searching for the following search phrase:
-				<br><i>“REQUEST=GetCapabilities” and “SERVICE=WMS”</i>
-				<br>as a single search phrase</h3>
+				<ul>
+				<li><i>“REQUEST=GetCapabilities” and “SERVICE=WMS”</i></li>
+				<li>as a single search phrase</li>
+				</ul>
 	    <h2>Question 1</h2>
 	    	<h3>What search engine did you use?</h3>
-        		<p>I used Google Search</p>
+        		<ul>
+        		<li>I used Google Search</li>
+        		</ul>
       	<h2>Question 2</h2>
         	<h3>How many 'hits' did you get?</h3>
-        		<p>28,300 hits</p>
+        		<ul>
+        		<li>28,300 hits</li>
+        		</ul>
 	    <h2>Question 3</h2>
 	     	<h3>How useful (generally in terms of getting a pointers to live WMS services [defined as a functioning GetCapabilities request]) were the ‘hits’?</h3>
-       			 <p></p>
+       			 <ul>
+       			 <li>The hits were very useful, the descriptions that came with each result helped define what type of data I was looking at.</li>
+       			 </ul>
        		<h3><i>Pick two of the services that included live "GetCapabilities" requests that you found above, and answer the following questions about each.</i></h3>
        	<h2>Question 4 (Service 1)</h2>
-       		<h3>What is the URL for the full GetCapabilities request to the service?
-			<br>What is the Name of the service?
-			<br>What Format(s) are available for GetMap requests from the service?
-			<br>How many layers are included in the service (including nesting layers)?</h3>
-				<p>http://dss.csiss.gmu.edu/cgi-bin/wms_cdlall?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetCapabilities
-				<br>
-				<br>Cropland Data Layer WMS Service
-				<br>
+       		<h3>a. What is the URL for the full GetCapabilities request to the service?
+			<br>b. What is the Name of the service?
+			<br>c. What Format(s) are available for GetMap requests from the service?
+			<br>d. How many layers are included in the service (including nesting layers)?</h3>
+				<ul>
+				<li>a. http://dss.csiss.gmu.edu/cgi-bin/wms_cdlall?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetCapabilities</li>
+				
+				<li>b. Cropland Data Layer WMS Service</li>
+				
+				<li>c.
 				<br>image/tiff
 				<br>image/gif
       			<br>image/png
       			<br>image/png; mode=24bit
       			<br>image/jpeg
       			<br>image/vnd.wap.wbmp
-      			<br>image/svg+xml
-				<br> 
-				<br>20 Layers are available, including nesting layers
-				</p>
-		<h2>Question 4(Service 2)</h2>
-				<h3>What is the URL for the full GetCapabilities request to the service?
-				<br>What is the Name of the service?
-				<br>What Format(s) are available for GetMap requests from the service?
-				<br>How many layers are included in the service (including nesting layers)?</h3>
-					<p>https://www.geoportal.ie/wss/service/ProtectedSites_NM-WMS-I-POL/guest?request=getcapabilities&service=wms
-					<br>
-					<br>Protected Sites - National Monuments (INSPIRE View Service)
-					<br>
+      			<br>image/svg+xml</li> 
+				
+				<li>d. 20 Layers are available, including nesting layers</li>
+				</ul>
+		<h2>Question 4 (Service 2)</h2>
+				<h3>a. What is the URL for the full GetCapabilities request to the service?
+				<br>b. What is the Name of the service?
+				<br>c.What Format(s) are available for GetMap requests from the service?
+				<br>d. How many layers are included in the service (including nesting layers)?</h3>
+					<ul>
+					<li><i>a. https://www.geoportal.ie/wss/service/ProtectedSites_NM-WMS-I-POL/guest?request=getcapabilities&service=wms</i></li>
+					
+					<li>b. Protected Sites - National Monuments (INSPIRE View Service)</li>
+					
+					<li>c.
 					<br>image/bmp
 					<br>image/jpeg
 					<br>image/tiff
@@ -87,35 +99,41 @@
 					<br>image/png24
 					<br>image/png32
 					<br>image/gif
-					<br>image/svg+xml
-					<br>
-					<br>9 Layers are available, including nesting layers.</p>
+					<br>image/svg+xml</li>
+					
+					<li>d. 9 Layers are available, including nesting layers.</li>
+					</ul>
 		<h2>Question 5</h2>
-			<h3>Question 5: For one of the layers in the first service,
-			<br>What is the name of the layer?
-			<br>What is the SRS of the layer?
-			<br>What is the name of the projection that matches the SRS EPSG code?
-			<br>What is the LatLonBoundingBox of the layer?</h3>
-				<p>Name=cdl_2009
-				<br>SRS=epsg:102004,epsg:4326
-				<br>Projection name: USA Contiguous Lambert Conformal Conic, Geographic WGS 84; respectively
-				<br>BBOX=-127.887,22.9401,-65.3455,51.605</p>
-				<br>
+			<h3>For one of the layers in the first service,
+			<br>a. What is the name of the layer?
+			<br>b. What is the SRS of the layer?
+			<br>c. What is the name of the projection that matches the SRS EPSG code?
+			<br>d. What is the LatLonBoundingBox of the layer?</h3>
+				<ul>
+				<li>a. Name=cdl_2009</li>
+				<li>b. SRS=epsg:102004,epsg:4326</li>
+				<li>c. Projection name: USA Contiguous Lambert Conformal Conic, Geographic WGS 84; respectively</li>
+				<li>d. BBOX=-127.887,22.9401,-65.3455,51.605</li>
+				</ul>
 			<h3>Open the following GetCapabilities request in your browser. Select “View Source” from the browser menu to see the delivered XML document (it may appear as an unformatted string of text by default in your browser - if that is the case, save the file to your hard drive and view it in a text editor). Use the information in the XML capabilities document to formulate GetMap requests for the following map images. Include the requests and resulting images in your write-up. Comment on anything unusual that you notice in the images that are returned.
 			<br>
 			<i>http://gstore.unm.edu/apps/rgis/datasets/92403ebf-aec5-404b-ae8a-6db41f388737/services/ogc/wms?SERVICE=wms&REQUEST=GetCapabilities&VERSION=1.1.1</i></h3>
 		<h2>Question 6</h2>
 			<h3>for the area surrounding Bernalillo County (-107.2,34.7,-106,35.25) as a 200x200 pixel JPEG for the same area as a 500x500 pixel PNG</h3>
-				<p>http://gstore.unm.edu/apps/rgis/datasets/92403ebf-aec5-404b-ae8a-6db41f388737/services/ogc/wms?VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&BBOX=-107.2,34.7,-106,35.25&LAYERS=2007fe_35_county&WIDTH=200&HEIGHT=200&SRS=EPSG:4269&FORMAT=image/jpeg&STYLES=
-				<br><img src="./m6_q_6a.jpeg"/>
-				<p>http://gstore.unm.edu/apps/rgis/datasets/92403ebf-aec5-404b-ae8a-6db41f388737/services/ogc/wms?VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&BBOX=-107.2,34.7,-106,35.25&LAYERS=2007fe_35_county&WIDTH=500&HEIGHT=500&SRS=EPSG:4269&FORMAT=image/jpeg&STYLES=
-				<br><img src="./m6_q_6b.jpeg"/>
+				<ul>
+				<li>http://gstore.unm.edu/apps/rgis/datasets/92403ebf-aec5-404b-ae8a-6db41f388737/services/ogc/wms?VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&BBOX=-107.2,34.7,-106,35.25&LAYERS=2007fe_35_county&WIDTH=200&HEIGHT=200&SRS=EPSG:4269&FORMAT=image/jpeg&STYLES=</li>
+				<li><img src="./m6_q_6a.jpeg"/></li>
+				<li>http://gstore.unm.edu/apps/rgis/datasets/92403ebf-aec5-404b-ae8a-6db41f388737/services/ogc/wms?VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&BBOX=-107.2,34.7,-106,35.25&LAYERS=2007fe_35_county&WIDTH=500&HEIGHT=500&SRS=EPSG:4269&FORMAT=image/jpeg&STYLES=</li>
+				<li><img src="./m6_q_6b.jpeg"/></li>
+				</ul>
 		<h3>Open the following (linked) KML file in Google Earth, uncompress it, and save the contained KML file on your computer. Open the KML file in a text editor
-		<br>http://rgis.unm.edu/gstore/datasets/3f0a85aa-b7f8-47bd-8db6-1c0e66becf72/nm_state_bdy_00.derived.kml</h3>
+		<br><i>http://rgis.unm.edu/gstore/datasets/3f0a85aa-b7f8-47bd-8db6-1c0e66becf72/nm_state_bdy_00.derived.kml</i></h3>
 		<h2>Question 7</h2>
 			<h3> Add a second Placemark element to the KML file that represents a square region that is completely contained within the state boundary. Save the KML file and open it in Google Earth (download from http://www.google.com/earth/index.html) or view it in Google Maps (by adding it to your GitHub gh-pages branch) as demonstrated in the lecture to verify that you have successfully created the file. Submit the KML file (as a link in your writeup) as part of your writeup for the milestone.</h3>
-				<p><a href="./milestone_6.kml">http://ezxile.github.io/GEOG485/milestone_6.kml</a>
-				<br><a href="https://maps.google.com/maps?q=http://ezxile.github.io/GEOG485/milestone_6.kml">Here is the KML displayed in Google Maps</a></p>
+				<ul>
+				<li><a href="./milestone_6.kml">http://ezxile.github.io/GEOG485/milestone_6.kml</a></li>
+				<li><a href="https://maps.google.com/maps?q=http://ezxile.github.io/GEOG485/milestone_6.kml">Here is the KML displayed in Google Maps</a></li>
+				</ul>
 				
 	
 	</body>
