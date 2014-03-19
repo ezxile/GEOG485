@@ -29,39 +29,39 @@
 		};
 		citymap ['new york']={
 		center:new google.maps.LatLng(40.7056308,-73.9780035),
-		score:
+		score:73.5
 		};
 		citymap ['boston']={
 		center:new google.maps.LatLng(42.3133735,-71.0571571),
-		score:
+		score:72.5
 		};
 		citymap ['sacramento']={
 		center:new google.maps.LatLng(42.3143036,-71.0571571),
-		score:
+		score:72.5
 		};
 		citymap ['san francisco']={
 		center:new google.maps.LatLng(37.7577,-122.4376),
-		score:
+		score:72.5
 		};
 		citymap ['washington']={
 		center:new google.maps.LatLng(38.8935965,-77.014576),
-		score:
+		score:71.5
 		};
 		citymap ['portland']={
 		center:new google.maps.LatLng(45.5424364,-122.654422),
-		score:
+		score:71.0
 		};
 		citymap ['virginia beach']={
 		center:new google.maps.LatLng(36.7674971,-76.0476647),
-		score:
+		score:70.0
 		};
 		citymap ['san diego']={
 		center:new google.maps.LatLng(32.8245525,-117.0951632),
-		score:
+		score:68.5
 		};
 		citymap ['seattle']={
 		center:new google.maps.LatLng(47.614848,-122.3358423),
-		score:
+		score:68.5
 		};
   	function initialize() {
     
@@ -150,7 +150,7 @@
 				radius: citymap[city].score
 				};
 			cityCircle=new google.maps.Circle(scoreOptions);
-			}
+			
 		}
 		google.maps.event.addDomListener(window,'load',initialize);
 
