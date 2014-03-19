@@ -29,7 +29,7 @@
         		<p>I used Google Search</p>
       	<h2>Question 2</h2>
         	<h3>How many 'hits' did you get?</h3>
-        		<p>242,000 hits</p>
+        		<p>28,300 hits</p>
 	    <h2>Question 3</h2>
 	     	<h3>How useful (generally in terms of getting a pointers to live WMS services [defined as a functioning GetCapabilities request]) were the ‘hits’?</h3>
        			 <p></p>
@@ -39,9 +39,53 @@
 			<br>What is the Name of the service?
 			<br>What Format(s) are available for GetMap requests from the service?
 			<br>How many layers are included in the service (including nesting layers)?</h3>
-				<p>
+				<p>http://dss.csiss.gmu.edu/cgi-bin/wms_cdlall?SERVICE=WMS&VERSION=1.1.1&REQUEST=GetCapabilities
 				<br>
+				<br>Cropland Data Layer WMS Service
 				<br>
-				<br> </p>
+				<br>image/tiff
+				<br>image/gif
+      			<br>image/png
+      			<br>image/png; mode=24bit
+      			<br>image/jpeg
+      			<br>image/vnd.wap.wbmp
+      			<br>image/svg+xml
+				<br> 
+				<br>20 Layers are available, including nesting layers
+				</p>
+		<h2>Question 4(Service 2)</h2>
+				<h3>What is the URL for the full GetCapabilities request to the service?
+				<br>What is the Name of the service?
+				<br>What Format(s) are available for GetMap requests from the service?
+				<br>How many layers are included in the service (including nesting layers)?</h3>
+					<p>https://www.geoportal.ie/wss/service/ProtectedSites_NM-WMS-I-POL/guest?request=getcapabilities&service=wms
+					<br>
+					<br>Protected Sites - National Monuments (INSPIRE View Service)
+					<br>
+					<br>image/bmp
+					<br>image/jpeg
+					<br>image/tiff
+					<br>image/png
+					<br>image/png8
+					<br>image/png24
+					<br>image/png32
+					<br>image/gif
+					<br>image/svg+xml
+					<br>
+					<br>9 Layers are available, including nesting layers.</p>
+		<h2>Question 5</h2>
+			<h3>Question 5: For one of the layers in the first service,
+			<br>What is the name of the layer?
+			<br>What is the SRS of the layer?
+			<br>What is the name of the projection that matches the SRS EPSG code?
+			<br>What is the LatLonBoundingBox of the layer?</h3>
+				<p>Name=cdl_2009
+				<br>SRS=epsg:102004,epsg:4326
+				<br>Projection name: USA Contiguous Lambert Conformal Conic, Geographic WGS 84; respectively
+				<br>BBOX=-127.887,22.9401,-65.3455,51.605</p>
+			<h3>Open the following GetCapabilities request in your browser. Select “View Source” from the browser menu to see the delivered XML document (it may appear as an unformatted string of text by default in your browser - if that is the case, save the file to your hard drive and view it in a text editor). Use the information in the XML capabilities document to formulate GetMap requests for the following map images. Include the requests and resulting images in your write-up. Comment on anything unusual that you notice in the images that are returned.
+			<br>
+			<i>http://gstore.unm.edu/apps/rgis/datasets/92403ebf-aec5-404b-ae8a-6db41f388737/services/ogc/wms?SERVICE=wms&REQUEST=GetCapabilities&VERSION=1.1.1</i></h3>
+		<h2>Question 6</h2>
 	</body>
 </html>
