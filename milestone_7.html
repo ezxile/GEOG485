@@ -59,8 +59,37 @@
 				<p>The "BoundingBox CRS=" section of the metadata explains minimum scales of each map layer for the CRS used.</p>
 		<h2>Question 8</h2>
 			<h3>Which map images contain data for each of the following map image widths (remember to adjust the image height to match the BBOX of the request)
-			<br>30 pixels
-			<br>1200 pixels</h3>
-				<p></p>
+			<ul>
+			<li>30 pixels
+			<li>1200 pixels
+			</ul></h3>
+				<p>
+				30 pixels:
+						<br>Layer = 0
+						<br>aspect ratio = 3/2 = 1.5
+						<br>height = (30px)/1.5 = 20px
+						<br><i>http://raster.nationalmap.gov/ArcGIS/services/TNM_Large_Scale_Imagery/MapServer/WMSServer?VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&BBOX=-106.639,35.074,-106.609,35.094&LAYERS=0&FORMAT=image/png&STYLES=&SRS=EPSG:4326&WIDTH=30&HEIGHT=20</i>
+						<br><img src="./m7_q_8a.png"/></p>
+								<br>
+						<br>Layer = 1
+						<br>aspect ratio = 3/2 = 1.5
+						<br>height = (30px)/1.5 = 20px
+						<br><i>http://raster.nationalmap.gov/ArcGIS/services/TNM_Large_Scale_Imagery/MapServer/WMSServer?VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&BBOX=-106.639,35.074,-106.609,35.094&LAYERS=1&FORMAT=image/png&STYLES=&SRS=EPSG:4326&WIDTH=30&HEIGHT=20</i>
+						<br><img src="./m7_q_8b.png"/></p>
+								<br>
+				<p>
+				1200 pixels
+						<br>Layer = 0
+						<br>aspect ratio = 3/2 = 1.5
+						<br>height = (1200px)/1.5 = 800px
+						<br><i>http://raster.nationalmap.gov/ArcGIS/services/TNM_Large_Scale_Imagery/MapServer/WMSServer?VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&BBOX=-106.639,35.074,-106.609,35.094&LAYERS=0&FORMAT=image/png&STYLES=&SRS=EPSG:4326&WIDTH=1200&HEIGHT=800</i>
+						<br><img src="./m7_q_8c.png"/></p>
+								<br>
+						<br>Layer = 1
+						<br>aspect ration = 1.5
+						<br>height = (1200px)/1.5 = 800px
+						<br><i>http://raster.nationalmap.gov/ArcGIS/services/TNM_Large_Scale_Imagery/MapServer/WMSServer?VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&BBOX=-106.639,35.074,-106.609,35.094&LAYERS=1&FORMAT=image/png&STYLES=&SRS=EPSG:4326&WIDTH=1200&HEIGHT=800</i>
+						<br><img src="./m7_q_8d.png"/></p>
+													
 	</body>
 </html>
