@@ -18,6 +18,15 @@
                 height:80%;
                 margin-left: auto;
                 margin-right: auto }
+        a { color: #08c; }
+			a:link, a:visited, a:active { text-decoration: none; }
+			a:hover { text-decoration: underline; }
+			a.block { display: block; }
+			a.block span,
+			a.block em { color:#08c; }
+			a.block:hover { text-decoration: none; }
+			a.block:hover span,
+			a.block:hover em { color: #08c; text-decoration: underline; }
 		</style>
 	<script type="text/javascript"
     src="http://maps.google.com/maps/api/js?sensor=false">
@@ -163,7 +172,7 @@
 	  </p>
   <h1>Deep Dive 1</h1>
   <h2>Cities With the Most Park Space</h2>
-  <p align=left> This is a map of the top ten cities in the United States. <a href="http://parkscore.tpl.org/">Park Score</a> ranks cities by determining the ratio between natural park space and developed space within the city limits. Park Score does this for cities around the world; yet this is a map of the highest ranked cities in the U.S. Interestingly, Albuquerque is <a href="http://parkscore.tpl.org/rankings_advanced.php">ranked</a> 11th in the nation. Unfortunately it was not placed in this map. 
+  <p align=left> This is a map of the top ten cities in the United States. <a href="http://parkscore.tpl.org/rankings.php">Park Score</a> ranks cities by determining the ratio between natural park space and developed space within the city limits. Park Score does this for cities around the world; yet this is a map of the highest ranked cities in the U.S. Interestingly, Albuquerque is <a href="http://parkscore.tpl.org/rankings_advanced.php">ranked</a> 11th in the nation. Unfortunately it was not placed in this map. 
   <div id="map_canvas"></div>
 	</body>
 </html>
