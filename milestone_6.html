@@ -83,9 +83,16 @@
 				<br>SRS=epsg:102004,epsg:4326
 				<br>Projection name: USA Contiguous Lambert Conformal Conic, Geographic WGS 84; respectively
 				<br>BBOX=-127.887,22.9401,-65.3455,51.605</p>
+				<br>
 			<h3>Open the following GetCapabilities request in your browser. Select “View Source” from the browser menu to see the delivered XML document (it may appear as an unformatted string of text by default in your browser - if that is the case, save the file to your hard drive and view it in a text editor). Use the information in the XML capabilities document to formulate GetMap requests for the following map images. Include the requests and resulting images in your write-up. Comment on anything unusual that you notice in the images that are returned.
 			<br>
 			<i>http://gstore.unm.edu/apps/rgis/datasets/92403ebf-aec5-404b-ae8a-6db41f388737/services/ogc/wms?SERVICE=wms&REQUEST=GetCapabilities&VERSION=1.1.1</i></h3>
 		<h2>Question 6</h2>
+			<h3>for the area surrounding Bernalillo County (-107.2,34.7,-106,35.25) as a 200x200 pixel JPEG for the same area as a 500x500 pixel PNG</h3>
+				<p>http://gstore.unm.edu/apps/rgis/datasets/92403ebf-aec5-404b-ae8a-6db41f388737/services/ogc/wms?VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&BBOX=-107.2,34.7,-106,35.25&LAYERS=2007fe_35_county&WIDTH=200&HEIGHT=200&SRS=EPSG:4269&FORMAT=image/jpeg&STYLES=
+				<br><img src="./m6_q_6a.jpeg"/>
+				<p>http://gstore.unm.edu/apps/rgis/datasets/92403ebf-aec5-404b-ae8a-6db41f388737/services/ogc/wms?VERSION=1.1.1&SERVICE=WMS&REQUEST=GetMap&BBOX=-107.2,34.7,-106,35.25&LAYERS=2007fe_35_county&WIDTH=500&HEIGHT=500&SRS=EPSG:4269&FORMAT=image/jpeg&STYLES=
+				<br><img src="./m6_q_6b.jpeg"/>
+	
 	</body>
 </html>
