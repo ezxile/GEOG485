@@ -14,19 +14,17 @@
         var gmap, ghyb;
 
         // =============== Initialization function ===================
-        function init(){
+        function initialize(){
             map = new OpenLayers.Map( 'map' );
             
             // =========== OSM Map ====================
-            layer = new OpenLayers.Layer.OSM( "Open Street Map");
-            map.addLayer(layer);
-            
-            map.setCenter(
-                new OpenLayers.LonLat(lon, lat).transform(
-                    new OpenLayers.Projection("EPSG:4326"),
-                    map.getProjectionObject()
-                ), zoom
-            );                
+            OSMlayer = new OpenLayers.Layer.OSM( "Open Street Map");
+            map.addLayer(OSMlayer);
+             map.setCenter(new OpenLayers.LonLat(lon,lat).transform(
+                new OpenLayers.Projection("EPSG:4326"),
+                map.getProjectionObject()
+             ), zoom);
+                             
         	gmap = new OpenLayers.Layer.Google(
                 "Google Streets", // the default
                 {numZoomLevels: 20}
@@ -36,13 +34,9 @@
                 {type: google.maps.MapTypeId.HYBRID, numZoomLevels: 20}
             );
             map.addLayers([gmap, ghyb]);
-            map.setCenter(new OpenLayers.LonLat(lon,lat).transform(
-                new OpenLayers.Projection("EPSG:4326"),
-                map.getProjectionObject()
-             ), zoom);
-                
             map.addControl(new OpenLayers.Control.LayerSwitcher() );
             }
+           
             
         // =============== End of Initialization Function ============
         
@@ -69,7 +63,7 @@
     <h2>Question 3</h2>
     	<h3>What base map(s) did you select for use in your map? Why?</h3>
     		<ul>
-    		<li></li>
+    		<li>I used Open Street maps and Google' street map and hybrid map types because I wanted to show the difference between OSM and Google displays of maps.</li>
     		</ul>
     <h2>Question 4</h2>
     	<h3>What is the scale of your map (local, regional, continental, global)? How will this translate into your selection of an appropriate default zoom level for your map?</h3>
