@@ -10,7 +10,7 @@
         var lat = 37.7829634;
         var zoom = 13;
         var map;
-        var layer;
+        var OSMlayer;
         var gmap, ghyb;
 
         // =============== Initialization function ===================
@@ -33,7 +33,7 @@
                 "Google Hybrid",
                 {type: google.maps.MapTypeId.HYBRID, numZoomLevels: 20}
             );
-            map.addLayers([gmap, ghyb]);
+            map.addLayers([gmap, ghyb, OSMlayer]);
             map.addControl(new OpenLayers.Control.LayerSwitcher() );
             }
            
