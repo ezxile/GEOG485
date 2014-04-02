@@ -20,7 +20,7 @@
             // =========== OSM Map ====================
             OSMlayer = new OpenLayers.Layer.OSM( "Open Street Map");
             map.addLayer(OSMlayer);
-             map.setCenter(new OpenLayers.LonLat(lon,lat).transform(
+            map.setCenter(new OpenLayers.LonLat(lon,lat).transform(
                 new OpenLayers.Projection("EPSG:4326"),
                 map.getProjectionObject()
              ), zoom);
@@ -33,7 +33,7 @@
                 "Google Hybrid",
                 {type: google.maps.MapTypeId.HYBRID, numZoomLevels: 20}
             );
-            map.addLayers([gmap, ghyb, OSMlayer]);
+            map.addLayers([gmap, ghyb]);
             map.addControl(new OpenLayers.Control.LayerSwitcher() );
             }
            
