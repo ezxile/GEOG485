@@ -11,6 +11,7 @@
         var zoom = 13;
         var map;
         var layer;
+        var gmap, ghyb;
 
         // =============== Initialization function ===================
         function init(){
@@ -26,12 +27,28 @@
                     map.getProjectionObject()
                 ), zoom
             );                
-        }
+        	gmap = new OpenLayers.Layer.Google(
+                "Google Streets", // the default
+                {numZoomLevels: 20}
+            );
+            ghyb = new OpenLayers.Layer.Google(
+                "Google Hybrid",
+                {type: google.maps.MapTypeId.HYBRID, numZoomLevels: 20}
+            );
+            map.addLayers([gmap, ghyb]);
+            map.setCenter(new OpenLayers.LonLat(lon,lat).transform(
+                new OpenLayers.Projection("EPSG:4326"),
+                map.getProjectionObject()
+             ), zoom);
+                
+            map.addControl(new OpenLayers.Control.LayerSwitcher() );
+            }
+            
         // =============== End of Initialization Function ============
         
     </script>
     <style type="text/css">
-        #map {width:90%; height:500px}
+        #map {width:90%; height:100%}
     </style>
   </head>
   <body onload="init()">
