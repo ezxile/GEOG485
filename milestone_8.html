@@ -10,30 +10,41 @@
         var lat = 37.7829634;
         var zoom = 13;
         var map;
+        var myProjection = new OpenLayers.Projection("EPSG:4326")
         var OSMlayer;
         var gmap, ghyb;
 
         // =============== Initialization function ===================
         function init(){
-            map = new OpenLayers.Map( 'map' );
-            
+            map = new OpenLayers.Map( 'map',
+            	{projection:myProjection,
+            	maxExtent: new OpenLayers.Bounds(-20037508, -20037508,
+				20037508, 20037508.34),
+				maxResolution: 156543.0339,
+				units: 'm'}
+            	 );
+                        
             // =========== OSM Map ====================
-            OSMlayer = new OpenLayers.Layer.OSM( "Open Street Map");
-            map.addLayer(OSMlayer);
-            map.setCenter(new OpenLayers.LonLat(lon,lat).transform(
-                new OpenLayers.Projection("EPSG:4326"),
-                map.getProjectionObject()
-             ), zoom);
-                             
+            
+                 
         	gmap = new OpenLayers.Layer.Google(
                 "Google Streets", // the default
                 {numZoomLevels: 20}
-            );
+            	);
             ghyb = new OpenLayers.Layer.Google(
                 "Google Hybrid",
                 {type: google.maps.MapTypeId.HYBRID, numZoomLevels: 20}
-            );
-            map.addLayers([gmap, ghyb]);
+            	);
+            map.addLayers([gmap, ghyb]
+            	);
+            OSMlayer = new OpenLayers.Layer.OSM( "Open Street Map");
+            map.addLayer(OSMlayer);
+            map.setCenter(new OpenLayers.LonLat(lon,lat).transform(
+                myProjection,
+                map.getProjectionObject()
+             ), zoom
+             	);
+                
             map.addControl(new OpenLayers.Control.LayerSwitcher() );
             }
            
@@ -53,7 +64,7 @@
 	<h2>Question 1</h2> 
 		<h3>What area do you want to depict in your map? Why?</h3>
         	<ul>
-        	<li>I want to depict San Francisco, California because I visited this city for the first time this month.</li>
+        	<li>I want to depict San Francisco, California because I created a kml file of a 7 mile walk I made this month.</li>
         	</ul>
     <h2>Question 2</h2>
     	<h3>What is the center point (latitude and longitude) of your area of interest?</h3>
