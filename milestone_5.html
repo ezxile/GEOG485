@@ -42,19 +42,40 @@
 	    <h2>Question 1</h2>
 	    	<h3>Briefly describe each dataset based upon the information from the web site.</h3>
         		<ul>
-        		<li></li>
+					<li>rgis Dataset:NMDOT: WMS Service for rgis dataset NM GPS Roads</li>
+					<li>rgis Dataset:NMDOT: Permanent traffic counters locations</li>
+					<li>rgis Dataset: NM Fire Burn Severity 2010</li>
         		</ul>
       	<h2>Question 2</h2>
         	<h3>Examine each file using either gdalinfo or ogrinfo (depending upon whether it is a raster or vector data product), and answer the following questions about each data set:
         		<ul>
-        			<li><h3>What is the projection/coordinate system for the data product? If it is undefined, note it.</h3></li>
+        			<li><h3>a. What is the projection/coordinate system for the data product? If it is undefined, note it.</h3></li>
         			
-        			<li><h3>What is the spatial extent (i.e. bounding box) of the data product?</h3></li>
+        			<li><h3>b. What is the spatial extent (i.e. bounding box) of the data product?</h3></li>
         			
-        			<li><h3>If it is a vector dataset, how many features does it have?</h3></li>
+        			<li><h3>c. If it is a vector dataset, how many features does it have?</h3></li>
         			
-        			<li><h3>If it is a raster dataset, what is the pixel resolution (include units) of the dataset?</h3></li>
+        			<li><h3>c. If it is a raster dataset, what is the pixel resolution (include units) of the dataset?</h3></li>
         		</ul>
+        		<ul>
+        			<li>rgis Dataset: NM GPS Roads
+        				<li>a.Projection: EPSG:4326</li>
+        				<li>b. BBox: (-109.04, 31.9523, -103.027, 36.9773)</li>
+        				<li>c.</li></li>
+        			<li>rgis Dataset:NMDOT: Permanent traffic counters locations
+        				<li>a. Projection: UTM Zone 13  </li>
+        				<li>b. BBox (-109.039649, 31.952345, -103.027231, 36.977276)</li>
+        				<li></li></li>
+        			<li>rgis Dataset: NM Fire Burn Severity 2010
+        				<li>a. Projection: EPSG:4326
+        				<li>b. BBox (-110.023219444, 37.5000527778, -102.511333333, 30.7942833333)</li>
+        				<li>c.<rastinfo>
+								<cvaltype>Unsigned 8-bit</cvaltype>
+								<rasttype>Grid Cell</rasttype>
+								<rowcount>25682</rowcount>
+								<colcount>22926</colcount>
+							</rastinfo>	</li></li>
+								
         			
 	    <h2>Question 3</h2>
 	     	<h3>Use proj or cs2cs (I suggest you use cs2cs) to calculate the coordinates of the spatial extent of the datasets that you downloaded in UTM Zone 13N, NAD27. Paste the input and output of the command(s) into your writeup.</h3>
