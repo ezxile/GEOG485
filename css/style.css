@@ -14,4 +14,12 @@ body{
 			font-size: 16px; }
 			li { 
 			list-style-type: none;}
-			
+			a { color: #08c; }
+			a:link, a:visited, a:active { text-decoration: none; }
+			a:hover { text-decoration: underline; }
+			a.block { display: block; }
+			a.block span,
+			a.block em { color:#08c; }
+			a.block:hover { text-decoration: none; }
+			a.block:hover span,
+			a.block:hover em { color: #08c; text-decoration: underline; }
