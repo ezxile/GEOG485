@@ -1,0 +1,69 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>Milestone 9</title>
+    <link href="../GEOG485/css/style.css" rel="stylesheet" type="text/css" media="screen">
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<script type="text/javascript" src="http://openlayers.org/api/OpenLayers.js"></script>
+    <script type="text/javascript">        
+        // define global variables
+        var lon = -122.4149391;
+        var lat = 37.7829634;
+        var zoom = 13;
+        var map;
+        var myProjection = new OpenLayers.Projection("EPSG:4326")
+        var OSMlayer;
+        var gmap, ghyb;
+
+        // =============== Initialization function ===================
+        function init(){
+            map = new OpenLayers.Map( 'map',
+            	{projection:myProjection,
+            	maxExtent: new OpenLayers.Bounds(-20037508, -20037508,
+				20037508, 20037508.34),
+				maxResolution: 156543.0339,
+				units: 'm'}
+            	 );
+                        
+            // =========== OSM Map ====================
+            
+                 
+        	gmap = new OpenLayers.Layer.Google(
+                "Google Streets", // the default
+                {numZoomLevels: 20}
+            	);
+            ghyb = new OpenLayers.Layer.Google(
+                "Google Hybrid",
+                {type: google.maps.MapTypeId.HYBRID, numZoomLevels: 20}
+            	);
+            map.addLayers([gmap, ghyb]
+            	);
+            OSMlayer = new OpenLayers.Layer.OSM( "Open Street Map");
+            map.addLayer(OSMlayer);
+            map.setCenter(new OpenLayers.LonLat(lon,lat).transform(
+                myProjection,
+                map.getProjectionObject()
+             ), zoom
+             	);
+                
+            map.addControl(new OpenLayers.Control.LayerSwitcher() );
+            }
+           
+            
+        // =============== End of Initialization Function ============
+        
+    </script>
+    <style type="text/css">
+        #map {width:90%; height:100%}
+    </style>
+  </head>
+  <body onload="init()">
+  <br>
+    Elisa Cedillos<br>
+  	March 31 2014<br>
+  <h1>Milestone 9</h1>
+  	<h2>Using the same map from week 10, embed 5 stylized vector features, 1 stylized KML file, and a WMS request into the map.
+	<!-- Map DIV -->
+    <div id="map"></div>    
+  </body>
+</html>

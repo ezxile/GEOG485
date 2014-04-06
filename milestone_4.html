@@ -7,6 +7,8 @@
     <link href="../GEOG485/css/style.css" rel="stylesheet" type="text/css" media="screen">
     <style type="text/css">
         html { height: 100% }
+        body { height: 100%;
+                text-align: center}
         #map_canvas { width: 90%;
                 height:80%;
                 margin-left: auto;
@@ -17,50 +19,8 @@
 	</script>
 	<script type="text/javascript">
 	var cityCircle;
-	var citymap = {};
-		citymap['minneapolis']={
-		center:new google.maps.LatLng(44.970697,-93.2618534),
-		score:81.0
-		};
-		citymap['new york']={
-		center:new google.maps.LatLng(40.7056308,-73.9780035),
-		score:73.5
-		};
-		citymap['boston']={
-		center:new google.maps.LatLng(42.3133735,-71.0571571),
-		score:72.5
-		};
-		citymap['sacramento']={
-		center:new google.maps.LatLng(42.3143036,-71.0571571),
-		score:72.5
-		};
-		citymap['san francisco']={
-		center:new google.maps.LatLng(37.7577,-122.4376),
-		score:72.5
-		};
-		citymap['washington']={
-		center:new google.maps.LatLng(38.8935965,-77.014576),
-		score:71.5
-		};
-		citymap['portland']={
-		center:new google.maps.LatLng(45.5424364,-122.654422),
-		score:71.0
-		};
-		citymap['virginia beach']={
-		center:new google.maps.LatLng(36.7674971,-76.0476647),
-		score:70.0
-		};
-		citymap['san diego']={
-		center:new google.maps.LatLng(32.8245525,-117.0951632),
-		score:68.5
-		};
-		citymap['seattle']={
-		center:new google.maps.LatLng(47.614848,-122.3358423),
-		score:68.5
-		};
-    
-    	var MapCenter = new google.maps.LatLng(37.09024, -95.712891)
-    	
+    var MapCenter = new google.maps.LatLng(37.09024, -95.712891)
+    var APIstyle	
  	function initialize () {
     	var myOptions = {
         	zoom: 4,
@@ -132,20 +92,6 @@
 
 		
 		var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions); 
-		for (var city in citymap){
-			var scoreOptions={
-				strokeColor:'#ff0000',
-				strokeOpacity: 0.8,
-				strokeWeight:2,
-				fillColor: '#FF0000',
-				fillOpacity:0.35,
-				map:map,
-				center: citymap[city].center,
-				radius: citymap[city].score
-				};
-			cityCircle=new google.maps.Circle(scoreOptions);
-			
-		}
 		google.maps.event.addDomListener(window,'load',initialize);
 }
 	</script>
@@ -156,8 +102,7 @@
   	<br/>12 February 2014
 	  </p>
   <h1>Milestone 4</h1>
-  <h2>Cities With the Most Park Space</h2>
-  <p align=left> This is a map of the top ten cities in the United States. <a href="http://parkscore.tpl.org/rankings.php">Park Score</a> ranks cities by determining the ratio between natural park space and developed space within the city limits. Park Score does this for cities around the world; yet this is a map of the highest ranked cities in the U.S. Interestingly, Albuquerque is <a href="http://parkscore.tpl.org/rankings_advanced.php">ranked</a> 11th in the nation. Unfortunately it was not placed in this map. 
+  <h2>Park Space in the US</h2>
   <div id="map_canvas"></div>
 	</body>
 </html>
