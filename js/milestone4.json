@@ -56,6 +56,12 @@
     ]
   },
 {
+    "featureType": "poi.park",
+    "stylers": [
+      { "hue": "#ff0008" }
+    ]
+  }
+{
 }
   
 }
