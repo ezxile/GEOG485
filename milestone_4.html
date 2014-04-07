@@ -20,74 +20,13 @@
 	<script type="text/javascript">
 	var cityCircle;
     var MapCenter = new google.maps.LatLng(40.683407,-102.0983269)
-    var APIstyle	
+    var mapStyle = href="../GEOG485/js/milestone4.json"	
  	function initialize () {
     	var myOptions = {
         	zoom: 5,
         	center: MapCenter,
        		mapTypeId: google.maps.MapTypeId.ROAD,
-      		styles:[
-  {
-    "featureType": "road.highway",
-    "stylers": [
-      { "visibility": "simplified" },
-      { "gamma": 1.31 },
-      { "saturation": -92 }
-    ]
-  },
-  {
-    "featureType": "poi.attraction",
-    "stylers": [
-      { "visibility": "off" }
-    ]
-  },
-  {
-    "featureType": "poi.business",
-    "stylers": [
-      { "visibility": "off" }
-    ]
-  },
-  {
-    "featureType": "poi.government",
-    "stylers": [
-      { "visibility": "off" }
-    ]
-  },
-  {
-    "featureType": "poi.medical",
-    "stylers": [
-      { "visibility": "off" }
-    ]
-  },
-  {
-    "featureType": "poi.place_of_worship",
-    "stylers": [
-      { "visibility": "off" }
-    ]
-  },{
-    
-    "featureType": "poi.school",
-    "stylers": [
-      { "visibility": "off" }
-    ]
-  },
-  {
-    "featureType": "road",
-    "stylers": [
-      { "visibility": "simplified" }
-    ]
-  },
-  {
-    "featureType": "transit",
-    "stylers": [
-      { "visibility": "off" }
-    ]
-  },
-  {
-  }
-  
-
-]
+      		styles:[mapStyle]
     };
 
 		
