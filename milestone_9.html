@@ -47,6 +47,17 @@
              	);
                 
             map.addControl(new OpenLayers.Control.LayerSwitcher() );
+             Layers.liquefaction = new OpenLayers.Layer.Vector("KML - Liquefaction Susceptibility", {
+        projection: map.displayProjection,
+        strategies: [new OpenLayers.Strategy.Fixed()],
+        protocol: new OpenLayers.Protocol.HTTP({
+            url: "BA_liquefaction.kml",
+            format: new OpenLayers.Format.KML({
+                extractAttributes: true
+            })
+        })
+    });
+    		map.addLayer(Layers.liquefaction)
             }
            
             
