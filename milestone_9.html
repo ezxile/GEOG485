@@ -50,10 +50,9 @@
             	Layers.liquefaction = new OpenLayers.Layer.Vector("KML - Liquefaction Susceptibility", {
         		projection: map.displayProjection,
         		visibility: true,
-        		style: ,
         		strategies: [new OpenLayers.Strategy.Fixed()],
         		protocol: new OpenLayers.Protocol.HTTP({
-            	url: "BA_Liquefaction.kml",
+            	url: ".BA_Liquefaction.kml",
             	format: new OpenLayers.Format.KML({
                 extractAttributes: true
             })
