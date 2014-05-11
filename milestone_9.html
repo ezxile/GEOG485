@@ -47,18 +47,19 @@
              ), zoom
              	);
                 
-            liquefac = new OpenLayers.Layer.Vector("Liquefaction Susceptibility", {
+            Layers.liquefac = new OpenLayers.Layer.Vector("Liquefaction Susceptibility", {
                 projection: map.displayProjection,
-                visibility: false,
+                visibility: true,
                 strategies: [new OpenLayers.Strategy.Fixed()],
                 protocol: new OpenLayers.Protocol.HTTP({
-                    url: "./BA_Liquefaction.kml",
+                    url: "http://ezxile.github.io/GEOG485/BA_Liquefaction.kml",
                     format: new OpenLayers.Format.KML({
-                        extractAttributes: true
+                        extractAttributes: false
                     })
                 })
             });
            	map.addLayer(Layers.liquefac)
+           	
            map.setCenter(
                 new OpenLayers.LonLat(lon, lat), zoom
             );
