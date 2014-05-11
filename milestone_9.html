@@ -49,7 +49,6 @@
             Layers.liquefac = new OpenLayers.Layer.Vector("Liquefaction Susceptibility", {
                 projection: map.displayProjection,
                 visibility: false,
-                style: ,
                 strategies: [new OpenLayers.Strategy.Fixed()],
                 protocol: new OpenLayers.Protocol.HTTP({
                     url: "./BA_Liquefaction.kml",
@@ -59,20 +58,14 @@
                 })
             });
            	map.addLayer(Layers.liquefac)
+           map.setCenter(
+                new OpenLayers.LonLat(lon, lat), zoom
+            );
+
+            map.addControl(new OpenLayers.Control.LayerSwitcher() );
+            map.addControl(new OpenLayers.Control.MousePosition() );
             }
-           Layers.liquefac = new OpenLayers.Layer.Vector("Liquefaction Susceptibility", {
-                projection: map.displayProjection,
-                visibility: false,
-                style: ,
-                strategies: [new OpenLayers.Strategy.Fixed()],
-                protocol: new OpenLayers.Protocol.HTTP({
-                    url: "./BA_Liquefaction.kml",
-                    format: new OpenLayers.Format.KML({
-                        extractAttributes: true
-                    })
-                })
-            });
-           	map.addLayer(Layers.liquefac)
+          
             
         // =============== End of Initialization Function ============
         
