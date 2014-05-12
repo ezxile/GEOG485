@@ -113,10 +113,7 @@ Layers.Onigilly = new OpenLayers.Layer.Vector('Onigilly Restaurant');
     Layers.GoldenGate = new OpenLayers.Layer.Vector('Golden Gate Bridge Tower');
     map.addLayer(Layers.GoldenGate); 
     
- var Coord_Onigilly = new OpenLayers.Geometry.Point(-122.404308, 37.7914033).transform(
-				new OpenLayers.Projection("EPSG:4326"),
-				map.getProjectionObject()
-				);
+ var Coord_Onigilly = new OpenLayers.Geometry.Point(-122.404308, 37.7914033);
     var Coord_Pier33 = new OpenLayers.Geometry.Point(-122.405162, 37.806908).transform(
 				new OpenLayers.Projection("EPSG:4326"),
 				map.getProjectionObject()
