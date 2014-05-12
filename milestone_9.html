@@ -18,42 +18,42 @@
   // =============== Styles ===================       
     SFwalk_style = {
       strokeOpacity: 1,
-      strokeColor: "#7f00ff"
+      strokeColor: "#fed808"
     }
     Onigilly_style = {
       pointRadius: 10,
-      fillColor: "#4da6ff",
+      fillColor: "#d8fe08",
       fillOpacity: .75,
       strokeOpacity: 1,
-      strokeColor: "#4da6ff",
+      strokeColor: "#d8fe08",
     }
     Pier33_style = {
       pointRadius: 10,
-      fillColor: "#4dffa6",
+      fillColor: "#08fef7",
       fillOpacity: .75,
       strokeOpacity: 1,
-      strokeColor: "#4dffa6",
+      strokeColor: "#08fef7",
     }
     FtMason_style = {
       pointRadius: 10,
-      fillColor: "#ff4da6",
+      fillColor: "#0881fe",
       fillOpacity: .75,
       strokeOpacity: 1,
-      strokeColor: "#ff4da6"
+      strokeColor: "#0881fe"
     }
     CrissyField_style = {
       pointRadius: 10,
-      fillColor: "#ffa64d",
+      fillColor: "#fe08ce",
       fillOpacity: .75,
       strokeOpacity: 1,
-      strokeColor: "#ffa64d"
+      strokeColor: "#fe08ce"
     }
     GoldenGate_style = {
       pointRadius: 10,
-      fillColor: "#a64dff",
+      fillColor: "#fe1708",
       fillOpacity: .75,
       strokeOpacity: 1,
-      strokeColor: "#a64dff"
+      strokeColor: "#fe1708"
     }
 
         // =============== Initialization function ===================
@@ -87,7 +87,7 @@
              ), zoom
              	);
                 
-            Layers.SFwalk = new OpenLayers.Layer.Vector("7.27mi Walk on 3/21/14", {
+            Layers.SFwalk = new OpenLayers.Layer.Vector("KML - 7.27mi Walk", {
                 projection: map.displayProjection,
                 style:SFwalk_style,
                 visibility: true,
@@ -102,15 +102,15 @@
            	map.addLayer(Layers.SFwalk)
            	
 // =============== Point Features (Layers) ============ 
-Layers.Onigilly = new OpenLayers.Layer.Vector('Onigilly Restaurant');
+Layers.Onigilly = new OpenLayers.Layer.Vector('Stop 1 - Onigilly Restaurant');
     map.addLayer(Layers.Onigilly);
-Layers.Pier33 = new OpenLayers.Layer.Vector('Pier 33');
+Layers.Pier33 = new OpenLayers.Layer.Vector('Stop 2 - Pier 33');
     map.addLayer(Layers.Pier33);
-Layers.FtMason = new OpenLayers.Layer.Vector('Ft. Mason Great Meadow');
+Layers.FtMason = new OpenLayers.Layer.Vector('Stop 3 - Ft. Mason Great Meadow');
     map.addLayer(Layers.FtMason);
-Layers.CrissyField = new OpenLayers.Layer.Vector('Crissy Field Dog Park');
+Layers.CrissyField = new OpenLayers.Layer.Vector('Stop 4 - Crissy Field');
     map.addLayer(Layers.CrissyField);
-Layers.GoldenGate = new OpenLayers.Layer.Vector('Golden Gate Bridge Tower');
+Layers.GoldenGate = new OpenLayers.Layer.Vector('Stop 5 - Golden Gate Bridge');
     map.addLayer(Layers.GoldenGate); 
     
  	var Coord_Onigilly = new OpenLayers.Geometry.Point(-122.404308, 37.7914033).transform(
