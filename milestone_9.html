@@ -20,6 +20,41 @@
     	strokeOpacity: 1,
     	strokeColor: "#7f00ff"
     }
+    	 Onigilly_style = {
+      pointRadius: 10,
+      fillColor: "#4da6ff",
+      fillOpacity: .75,
+      strokeOpacity: 1,
+      strokeColor: "#4da6ff",
+    }
+    Pier33_style = {
+      pointRadius: 10,
+      fillColor: "#4dffa6",
+      fillOpacity: .75,
+      strokeOpacity: 1,
+      strokeColor: "#4dffa6",
+    }
+    FtMason_style = {
+      pointRadius: 10,
+      fillColor: "#ff4da6",
+      fillOpacity: .75,
+      strokeOpacity: 1,
+      strokeColor: "#ff4da6"
+    }
+    CrissyField_style = {
+      pointRadius: 10,
+      fillColor: "#ffa64d",
+      fillOpacity: .75,
+      strokeOpacity: 1,
+      strokeColor: "#ffa64d"
+    }
+    GoldenGate_style = {
+      pointRadius: 10,
+      fillColor: "#a64dff",
+      fillOpacity: .75,
+      strokeOpacity: 1,
+      strokeColor: "#a64dff"
+    }
 
         // =============== Initialization function ===================
         function init(){
@@ -52,7 +87,7 @@
              ), zoom
              	);
                 
-            Layers.SFwalk = new OpenLayers.Layer.Vector("Walking Path", {
+            Layers.SFwalk = new OpenLayers.Layer.Vector("7.27mi Walk on 3/21/14", {
                 projection: map.displayProjection,
                 style:SFwalk_style,
                 visibility: true,
@@ -65,6 +100,41 @@
                 })
             });
            	map.addLayer(Layers.SFwalk)
+           	
+// =============== Point Features (Layers) ============  
+ var Coord_Onigilly = new OpenLayers.Geometry.Point(-122.404308, 37.7914033).transform(
+				new OpenLayers.Projection("EPSG:4326"),
+				map.getProjectionObject()
+				);
+    var Coord_Pier33 = new OpenLayers.Geometry.Point(-122.405162, 37.806908).transform(
+				new OpenLayers.Projection("EPSG:4326"),
+				map.getProjectionObject()
+				);
+    var Coord_FtMason = new OpenLayers.Geometry.Point(-122.4298598, 37.8058729).transform(
+				new OpenLayers.Projection("EPSG:4326"),
+				map.getProjectionObject()
+				);
+    var Coord_CrissyField = new OpenLayers.Geometry.Point(-122.4658972, 37.8048635).transform(
+				new OpenLayers.Projection("EPSG:4326"),
+				map.getProjectionObject()
+				);
+    var Coord_GoldenGate = new OpenLayers.Geometry.Point(-119.690929, 34.410744).transform(
+				new OpenLayers.Projection("EPSG:4326"),
+				map.getProjectionObject()
+				);
+
+    var Point_Onigilly = new OpenLayers.Feature.Vector(Coord_Onigilly,null,Onigilly_style);
+    var Point_Pier33 = new OpenLayers.Feature.Vector(Coord_Pier33,null,LeadbetterBeach_style);
+    var Point_FtMason = new  OpenLayers.Feature.Vector(Coord_FtMason,null,MesaLaneSteps_style);
+    var Point_CrissyField = new  OpenLayers.Feature.Vector(Coord_CrissyField,null,ThousandSteps_style);
+    var Point_GoldenGate = new  OpenLayers.Feature.Vector(Coord_GoldenGate,null,WestBeach_style);
+
+    Layers ["Onigilly Restaurant"].addFeatures([Point_Onigilly]);
+    Layers ["Pier 33"].addFeatures([Point_Pier33]);
+    Layers ["Ft. Mason Great Meadow"].addFeatures([Point_FtMason]);
+    Layers ["Crissy Field Dog Park"].addFeatures([Point_CrissyField]);
+    Layers ["Golden Gate Bridge Tower"].addFeatures([Point_GoldenGate]);         	
+           	
            	
           
 
