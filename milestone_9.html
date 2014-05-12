@@ -151,14 +151,13 @@ Layers.GoldenGate = new OpenLayers.Layer.Vector('Stop 5 - Golden Gate Bridge');
            			map.addControl(new OpenLayers.Control.LayerSwitcher() );
         		    map.addControl(new OpenLayers.Control.MousePosition() );
         		    
-
+// =============== WMS (layer) ============
 Layers.wms = new OpenLayers.Layer.WMS("WMS - Marine Sanctuaries",
       "http://nowcoast.noaa.gov:80/wms/com.esri.wms.Esrimap/analyses",
       {
       layers: "marine_sanctuaries",
       transparent: true
       }, {
-      opacity: 0.5,
       singleTile: true
     });
     map.addLayer(Layers.wms)
