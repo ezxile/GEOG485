@@ -104,16 +104,19 @@
 // =============== Point Features (Layers) ============ 
 Layers.Onigilly = new OpenLayers.Layer.Vector('Onigilly Restaurant');
     map.addLayer(Layers.Onigilly);
-    Layers.Pier33 = new OpenLayers.Layer.Vector('Pier 33');
+Layers.Pier33 = new OpenLayers.Layer.Vector('Pier 33');
     map.addLayer(Layers.Pier33);
-    Layers.FtMason = new OpenLayers.Layer.Vector('Ft. Mason Great Meadow');
+Layers.FtMason = new OpenLayers.Layer.Vector('Ft. Mason Great Meadow');
     map.addLayer(Layers.FtMason);
-    Layers.CrissyField = new OpenLayers.Layer.Vector('Crissy Field Dog Park');
+Layers.CrissyField = new OpenLayers.Layer.Vector('Crissy Field Dog Park');
     map.addLayer(Layers.CrissyField);
-    Layers.GoldenGate = new OpenLayers.Layer.Vector('Golden Gate Bridge Tower');
+Layers.GoldenGate = new OpenLayers.Layer.Vector('Golden Gate Bridge Tower');
     map.addLayer(Layers.GoldenGate); 
     
- var Coord_Onigilly = new OpenLayers.Geometry.Point(-122.404308, 37.7914033);
+ 	var Coord_Onigilly = new OpenLayers.Geometry.Point(-122.404308, 37.7914033).transform(
+ 				new OpenLayers.Projection(myProjection),
+ 				map.getProjectionObject()
+ 				);
     var Coord_Pier33 = new OpenLayers.Geometry.Point(-122.405162, 37.806908).transform(
 				new OpenLayers.Projection(myProjection),
 				map.getProjectionObject()
@@ -131,23 +134,23 @@ Layers.Onigilly = new OpenLayers.Layer.Vector('Onigilly Restaurant');
 				map.getProjectionObject()
 				);
 
-    var Point_Onigilly = new OpenLayers.Feature.Vector(Coord_Onigilly,null,Onigilly_style);
-    var Point_Pier33 = new OpenLayers.Feature.Vector(Coord_Pier33,null,Pier33_style);
-    var Point_FtMason = new  OpenLayers.Feature.Vector(Coord_FtMason,null,FtMason_style);
-    var Point_CrissyField = new  OpenLayers.Feature.Vector(Coord_CrissyField,null,CrissyField_style);
-    var Point_GoldenGate = new  OpenLayers.Feature.Vector(Coord_GoldenGate,null,GoldenGate_style);
+    	var Point_Onigilly = new OpenLayers.Feature.Vector(Coord_Onigilly,null,Onigilly_style);
+    	var Point_Pier33 = new OpenLayers.Feature.Vector(Coord_Pier33,null,Pier33_style);
+    	var Point_FtMason = new  OpenLayers.Feature.Vector(Coord_FtMason,null,FtMason_style);
+    	var Point_CrissyField = new  OpenLayers.Feature.Vector(Coord_CrissyField,null,CrissyField_style);
+    	var Point_GoldenGate = new  OpenLayers.Feature.Vector(Coord_GoldenGate,null,GoldenGate_style);
 
-    Layers ["Onigilly"].addFeatures([Point_Onigilly]);
-    Layers ["Pier33"].addFeatures([Point_Pier33]);
-    Layers ["FtMason"].addFeatures([Point_FtMason]);
-    Layers ["CrissyField"].addFeatures([Point_CrissyField]);
-    Layers ["GoldenGate"].addFeatures([Point_GoldenGate]);         	
+   			 Layers ["Onigilly"].addFeatures([Point_Onigilly]);
+   			 Layers ["Pier33"].addFeatures([Point_Pier33]);
+   			 Layers ["FtMason"].addFeatures([Point_FtMason]);
+   			 Layers ["CrissyField"].addFeatures([Point_CrissyField]);
+   			 Layers ["GoldenGate"].addFeatures([Point_GoldenGate]);         	
            	
            	
           
 
-            map.addControl(new OpenLayers.Control.LayerSwitcher() );
-            map.addControl(new OpenLayers.Control.MousePosition() );
+           			map.addControl(new OpenLayers.Control.LayerSwitcher() );
+        		    map.addControl(new OpenLayers.Control.MousePosition() );
             }
           
             
