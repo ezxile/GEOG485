@@ -11,16 +11,16 @@
         var lat = 37.7829634;
         var zoom = 13;
         var map;
-        var myProjection = new OpenLayers.Projection("EPSG:4326")
+        var myProjection = new OpenLayers.Projection("EPSG:4326");
         var OSMlayer;
         var gmap, ghyb;
         var Layers = new Object();
-        
-        SFwalk_style = {
-    	strokeOpacity: 1,
-    	strokeColor: "#7f00ff"
+  // =============== Styles ===================       
+    SFwalk_style = {
+      strokeOpacity: 1,
+      strokeColor: "#7f00ff"
     }
-    	 Onigilly_style = {
+    Onigilly_style = {
       pointRadius: 10,
       fillColor: "#4da6ff",
       fillOpacity: .75,
@@ -115,19 +115,19 @@ Layers.Onigilly = new OpenLayers.Layer.Vector('Onigilly Restaurant');
     
  var Coord_Onigilly = new OpenLayers.Geometry.Point(-122.404308, 37.7914033);
     var Coord_Pier33 = new OpenLayers.Geometry.Point(-122.405162, 37.806908).transform(
-				new OpenLayers.Projection("EPSG:4326"),
+				new OpenLayers.Projection(myProjection),
 				map.getProjectionObject()
 				);
     var Coord_FtMason = new OpenLayers.Geometry.Point(-122.4298598, 37.8058729).transform(
-				new OpenLayers.Projection("EPSG:4326"),
+				new OpenLayers.Projection(myProjection),
 				map.getProjectionObject()
 				);
     var Coord_CrissyField = new OpenLayers.Geometry.Point(-122.4658972, 37.8048635).transform(
-				new OpenLayers.Projection("EPSG:4326"),
+				new OpenLayers.Projection(myProjection),
 				map.getProjectionObject()
 				);
     var Coord_GoldenGate = new OpenLayers.Geometry.Point(-119.690929, 34.410744).transform(
-				new OpenLayers.Projection("EPSG:4326"),
+				new OpenLayers.Projection(myProjection),
 				map.getProjectionObject()
 				);
 
@@ -137,11 +137,11 @@ Layers.Onigilly = new OpenLayers.Layer.Vector('Onigilly Restaurant');
     var Point_CrissyField = new  OpenLayers.Feature.Vector(Coord_CrissyField,null,CrissyField_style);
     var Point_GoldenGate = new  OpenLayers.Feature.Vector(Coord_GoldenGate,null,GoldenGate_style);
 
-    Layers ["Onigilly Restaurant"].addFeatures([Point_Onigilly]);
-    Layers ["Pier 33"].addFeatures([Point_Pier33]);
-    Layers ["Ft. Mason Great Meadow"].addFeatures([Point_FtMason]);
-    Layers ["Crissy Field Dog Park"].addFeatures([Point_CrissyField]);
-    Layers ["Golden Gate Bridge Tower"].addFeatures([Point_GoldenGate]);         	
+    Layers ["Onigilly"].addFeatures([Point_Onigilly]);
+    Layers ["Pier33"].addFeatures([Point_Pier33]);
+    Layers ["FtMason"].addFeatures([Point_FtMason]);
+    Layers ["CrissyField"].addFeatures([Point_CrissyField]);
+    Layers ["GoldenGate"].addFeatures([Point_GoldenGate]);         	
            	
            	
           
