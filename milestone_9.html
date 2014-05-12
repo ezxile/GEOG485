@@ -101,7 +101,18 @@
             });
            	map.addLayer(Layers.SFwalk)
            	
-// =============== Point Features (Layers) ============  
+// =============== Point Features (Layers) ============ 
+Layers.Onigilly = new OpenLayers.Layer.Vector('Onigilly Restaurant');
+    map.addLayer(Layers.Onigilly);
+    Layers.Pier33 = new OpenLayers.Layer.Vector('Pier 33');
+    map.addLayer(Layers.Pier33);
+    Layers.FtMason = new OpenLayers.Layer.Vector('Ft. Mason Great Meadow');
+    map.addLayer(Layers.FtMason);
+    Layers.CrissyField = new OpenLayers.Layer.Vector('Crissy Field Dog Park');
+    map.addLayer(Layers.CrissyField);
+    Layers.GoldenGate = new OpenLayers.Layer.Vector('Golden Gate Bridge Tower');
+    map.addLayer(Layers.GoldenGate); 
+    
  var Coord_Onigilly = new OpenLayers.Geometry.Point(-122.404308, 37.7914033).transform(
 				new OpenLayers.Projection("EPSG:4326"),
 				map.getProjectionObject()
