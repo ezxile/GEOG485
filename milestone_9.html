@@ -15,6 +15,11 @@
         var OSMlayer;
         var gmap, ghyb;
         var Layers = new Object();
+        
+        SFwalk_style = {
+    	strokeOpacity: 1,
+    	strokeColor: "#7f00ff"
+    }
 
         // =============== Initialization function ===================
         function init(){
@@ -47,14 +52,15 @@
              ), zoom
              	);
                 
-            Layers.liquefac = new OpenLayers.Layer.Vector("Liquefaction Susceptibility", {
+            Layers.SFwalk = new OpenLayers.Layer.Vector("Walking Path", {
                 projection: map.displayProjection,
+                style:SFwalk_style,
                 visibility: true,
                 strategies: [new OpenLayers.Strategy.Fixed()],
                 protocol: new OpenLayers.Protocol.HTTP({
-                    url: "http://ezxile.github.io/GEOG485/BA_Liquefaction.kml",
+                    url: "http://ezxile.github.io/GEOG485/SF_walk.kml",
                     format: new OpenLayers.Format.KML({
-                        extractAttributes: false
+                        extractAttributes: true
                     })
                 })
             });
