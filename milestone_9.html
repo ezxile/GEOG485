@@ -18,8 +18,7 @@
   // =============== Styles ===================       
     SFwalk_style = {
       strokeOpacity: 1,
-      strokeColor: "#bd9500"
-    }
+      strokeColor: "#80ff00
     Onigilly_style = {
       pointRadius: 10,
       fillColor: "#d8fe08",
@@ -106,7 +105,7 @@ Layers.Onigilly = new OpenLayers.Layer.Vector('Stop 1 - Onigilly Restaurant');
     map.addLayer(Layers.Onigilly);
 Layers.Pier33 = new OpenLayers.Layer.Vector('Stop 2 - Pier 33');
     map.addLayer(Layers.Pier33);
-Layers.FtMason = new OpenLayers.Layer.Vector('Stop 3 - Ft. Mason Great Meadow');
+Layers.FtMason = new OpenLayers.Layer.Vector('Stop 3 - Ft. Mason');
     map.addLayer(Layers.FtMason);
 Layers.CrissyField = new OpenLayers.Layer.Vector('Stop 4 - Crissy Field');
     map.addLayer(Layers.CrissyField);
@@ -151,6 +150,18 @@ Layers.GoldenGate = new OpenLayers.Layer.Vector('Stop 5 - Golden Gate Bridge');
 
            			map.addControl(new OpenLayers.Control.LayerSwitcher() );
         		    map.addControl(new OpenLayers.Control.MousePosition() );
+        		    
+
+Layers.wms = new OpenLayers.Layer.WMS("WMS - Marine Sanctuaries",
+      "http://nowcoast.noaa.gov:80/wms/com.esri.wms.Esrimap/analyses",
+      {
+      layers: "marine_sanctuaries",
+      transparent: true
+      }, {
+      opacity: 0.5,
+      singleTile: true
+    });
+    map.addLayer(Layers.wms)
             }
           
             
