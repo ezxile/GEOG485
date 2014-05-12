@@ -6,16 +6,17 @@
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 	<script type="text/javascript" src="http://openlayers.org/api/OpenLayers.js"></script>
     <script type="text/javascript">        
-        // define global variables
-        var lon = -122.4149391;
-        var lat = 37.7829634;
-        var zoom = 11;
-        var map;
-        var myProjection = new OpenLayers.Projection("EPSG:4326");
-        var OSMlayer;
-        var gmap, ghyb;
-        var Layers = new Object();
-  // =============== Styles ===================       
+
+        	var lon = -122.4149391;
+       		var lat = 37.7829634;
+        	var zoom = 11;
+       		var map;
+        	var myProjection = new OpenLayers.Projection("EPSG:4326");
+        	var OSMlayer;
+        	var gmap, ghyb;
+        	var Layers = new Object();
+        	
+		// =============== Styles ===================       
     SFwalk_style = {
       strokeOpacity: 1,
       strokeColor: "#000000",
@@ -56,7 +57,7 @@
       strokeColor: "#fe1708"
     }
 
-        // =============== Initialization function ===================
+		// =============== Initialization function ===================
         function init(){
             map = new OpenLayers.Map( 'map',
             	{projection:myProjection,
@@ -66,10 +67,8 @@
 				units: 'm'}
             	 );
                         
-            // =========== OSM Map ====================
-            
-                 
-        	gmap = new OpenLayers.Layer.Google(
+		// =========== OSM Map ====================
+            gmap = new OpenLayers.Layer.Google(
                 "Google Streets", // the default
                 {numZoomLevels: 20}
             	);
@@ -86,8 +85,20 @@
                 map.getProjectionObject()
              ), zoom
              	);
-                
-            Layers.SFwalk = new OpenLayers.Layer.Vector("KML - 7.27mi Walk", {
+             	
+ 		// =============== WMS (layer) ============
+Layers.wms = new OpenLayers.Layer.WMS("WMS - Marine Sanctuaries",
+      "http://nowcoast.noaa.gov:80/wms/com.esri.wms.Esrimap/analyses",
+      {
+      layers: "marine_sanctuaries",
+      transparent: true
+      }, {
+      singleTile: true
+    });
+    map.addLayer(Layers.wms) 
+
+ 		// =============== KML (layer) ============              
+Layers.SFwalk = new OpenLayers.Layer.Vector("KML - 7.27mi Walk", {
                 projection: map.displayProjection,
                 style:SFwalk_style,
                 visibility: true,
@@ -101,18 +112,9 @@
             });
            	map.addLayer(Layers.SFwalk)
            	
-// =============== WMS (layer) ============
-Layers.wms = new OpenLayers.Layer.WMS("WMS - Marine Sanctuaries",
-      "http://nowcoast.noaa.gov:80/wms/com.esri.wms.Esrimap/analyses",
-      {
-      layers: "marine_sanctuaries",
-      transparent: true
-      }, {
-      singleTile: true
-    });
-    map.addLayer(Layers.wms)
+
            	
-// =============== Point Features (Layers) ============ 
+		// =============== Point Features (Layers) ============ 
 Layers.Onigilly = new OpenLayers.Layer.Vector('Stop 1 - Onigilly Restaurant');
     map.addLayer(Layers.Onigilly);
 Layers.Pier33 = new OpenLayers.Layer.Vector('Stop 2 - Pier 33');
@@ -180,7 +182,6 @@ Layers.GoldenGate = new OpenLayers.Layer.Vector('Stop 5 - Golden Gate Bridge');
   	March 31 2014<br>
   <h1>Milestone 9</h1>
   	<h2>Using the same map from week 10, embed 5 stylized vector features, 1 stylized KML file, and a WMS request into the map.
-	<!-- Map DIV -->
     <div id="map"></div>    
   </body>
 </html>
