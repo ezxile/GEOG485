@@ -16,10 +16,10 @@
 			</ul>
 		<br>In your write-up include the names of the layers you added, which service they came from, and screen shots (one for for each of the added layers) showing each of them in the QGIS client interface</h3>
 		<br>
-			<ul>
+			<b><ul>
 		<li>Request: <a href="http://basemap.nationalmap.gov/ArcGIS/services/USGSTopo/MapServer/WMSServer?request=GetCapabilities&service=WMS">http://basemap.nationalmap.gov/ArcGIS/services/USGSTopo/MapServer/WMSServer?request=GetCapabilities&service=WMS</a>
 			<br>Layer: 0 (Title: USGS Topographic Base Map Small Scale)
-			<br>Service: MapServer WMS
+			<br>Service: USGSTopo
 			<br><br><img src="./WMS1_USGSTopo.png" width="550">
 		</li>
 			<br>
@@ -35,18 +35,18 @@
 			<br>
 		<li>Request:<a href="http://107.20.228.18/ArcGIS/services/Wetlands/MapServer/WMSServer?request=GetCapabilities&service=WMS">http://107.20.228.18/ArcGIS/services/Wetlands/MapServer/WMSServer?request=GetCapabilities&service=WMS</a>
 			<br>Layer: 0 (Title: wetlands)
-			<br>Service: <![CDATA[ WMS ]]>
+			<br>Service: &lt;![CDATA[ WMS ]]&gt;
 			<br><br><img src="./WMS3_USGSWetlands.png" width="550">
-		</li></ul>
+		</li></ul></b>
 	<h2>Question 2</h2>
 		<h3>Add three WFS layers to the same QGIS project...</h3>
 			
 			<br>two from the RGIS data browser (<a href="http://rgis.unm.edu/browsedata">http://rgis.unm.edu/browsedata</a>)
 			<br>one based on the USGS GeoNames WFS service: <a href="http://services.nationalmap.gov/arcgis/services/WFS/geonames/MapServer/WFSServer?request=GetCapabilities&service=WFS">http://services.nationalmap.gov/arcgis/services/WFS/geonames/MapServer/WFSServer?request=GetCapabilities&service=WFS</a>
-		<ul>
+		<b><ul>
 		<li>Request:<a href="https://hazards.fema.gov/gis/nfhl/services/public/NFHL/MapServer/WFSServer?request=GetCapabilities&service=WFS">https://hazards.fema.gov/gis/nfhl/services/public/NFHL/MapServer/WFSServer?request=GetCapabilities&service=WFS</a>
 			<br>Name: public_NFHL:Levees
-			<br>Service: MapServer WFS
+			<br>Service: National Flood Hazard Layer WFS
 			<br><br><img src="./WFS1_USGSLevees.png" width="550">
 		</li>
 			<br>
@@ -64,7 +64,7 @@
 			<br>Name: nm_minown_2012
 			<br>Service: MapServer WFS
 			<br><br><img src="./WFS3_RGISOwnership.png" width="550">
-		</li></ul>
+		</li></ul></b>
 
 
   </body>
