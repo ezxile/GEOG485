@@ -17,22 +17,25 @@
 		<br>In your write-up include the names of the layers you added, which service they came from, and screen shots (one for for each of the added layers) showing each of them in the QGIS client interface</h3>
 		<br>
 			<ul>
-				<li>Layer: 0 (Title: USGS Topographic Base Map Small Scale)
-			<br>Service:WMS
+		<li>Request: <a href="http://basemap.nationalmap.gov/ArcGIS/services/USGSTopo/MapServer/WMSServer?request=GetCapabilities&service=WMS">http://basemap.nationalmap.gov/ArcGIS/services/USGSTopo/MapServer/WMSServer?request=GetCapabilities&service=WMS</a>
+			<br>Layer: 0 (Title: USGS Topographic Base Map Small Scale)
+			<br>Service: MapServer WMS
 			<br><br><img src="./WMS1_USGSTopo.png" width="550">
 		</li>
 			<br>
 			<br>
 			<br>
-		<li>Layer: surveyareapoly
-			<br>Service: WMS
+		<li>Request:<a href="http://sdmdataaccess.nrcs.usda.gov/Spatial/SDM.wms?SERVICE=WMS&REQUEST=GetCapabilities">http://sdmdataaccess.nrcs.usda.gov/Spatial/SDM.wms?SERVICE=WMS&REQUEST=GetCapabilities ((Downloads .xml file))</a>
+			<br>Layer: SurveyAreaPoly
+			<br>Service: USDA NRCS WMS
 			<br><br><img src="./WMS2_NRCSSoils.png" width="550">
 		</li>
 			<br>
 			<br>
 			<br>
-		<li>Layer: 0 (Title: wetlands)
-			<br>Service: WMS
+		<li>Request:<a href="http://107.20.228.18/ArcGIS/services/Wetlands/MapServer/WMSServer?request=GetCapabilities&service=WMS">http://107.20.228.18/ArcGIS/services/Wetlands/MapServer/WMSServer?request=GetCapabilities&service=WMS</a>
+			<br>Layer: 0 (Title: wetlands)
+			<br>Service: <![CDATA[ WMS ]]>
 			<br><br><img src="./WMS3_USGSWetlands.png" width="550">
 		</li></ul>
 	<h2>Question 2</h2>
@@ -41,24 +44,24 @@
 			<br>two from the RGIS data browser (<a href="http://rgis.unm.edu/browsedata">http://rgis.unm.edu/browsedata</a>)
 			<br>one based on the USGS GeoNames WFS service: <a href="http://services.nationalmap.gov/arcgis/services/WFS/geonames/MapServer/WFSServer?request=GetCapabilities&service=WFS">http://services.nationalmap.gov/arcgis/services/WFS/geonames/MapServer/WFSServer?request=GetCapabilities&service=WFS</a>
 		<ul>
-		<li>Request:
-			<br>Service:WFS
+		<li>Request:<a href="https://hazards.fema.gov/gis/nfhl/services/public/NFHL/MapServer/WFSServer?request=GetCapabilities&service=WFS">https://hazards.fema.gov/gis/nfhl/services/public/NFHL/MapServer/WFSServer?request=GetCapabilities&service=WFS</a>
+			<br>Service: MapServer WFS
 			<br>Name: public_NFHL:Levees
 			<br><br><img src="./WFS1_USGSLevees.png" width="550">
 		</li>
 			<br>
 			<br>
 			<br>
-		<li>Request:
-			<br>Service:WFS
+		<li>Request:<a href="http://gstore.unm.edu/apps/rgis/datasets/ac9065b8-6d95-4a19-9139-f564e6369481/services/ogc/wfs?SERVICE=wfs&REQUEST=GetCapabilities&VERSION=1.0.0">http://gstore.unm.edu/apps/rgis/datasets/ac9065b8-6d95-4a19-9139-f564e6369481/services/ogc/wfs?SERVICE=wfs&REQUEST=GetCapabilities&VERSION=1.0.0</a>
+			<br>Service: MapServer WFS
 			<br>Name: clovisshp
 			<br><br><img src="./WFS2_RGISCovisLanduse.png" width="550">
 		</li>
 			<br>
 			<br>
 			<br>
-		<li>Request:
-			<br>Service:WFS
+		<li>Request:<a href="http://gstore.unm.edu/apps/rgis/datasets/e36f438e-fbb1-4399-8d01-468e0eb9a525/services/ogc/wfs?SERVICE=wfs&REQUEST=GetCapabilities&VERSION=1.0.0">http://gstore.unm.edu/apps/rgis/datasets/e36f438e-fbb1-4399-8d01-468e0eb9a525/services/ogc/wfs?SERVICE=wfs&REQUEST=GetCapabilities&VERSION=1.0.0</a>
+			<br>Service: MapServer WFS
 			<br>Name: nm_minown_2012
 			<br><br><img src="./WFS3_RGISOwnership.png" width="550">
 		</li></ul>
