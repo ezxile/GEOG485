@@ -1,12 +1,14 @@
-<!DOCTYPE html>
-<head>
-<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <title>Milestone 13</title>
-		<link href="../GEOG485/css/style.css" rel="stylesheet" type="text/css" media="screen">
-      <script type="text/javascript">        
+    <link href="../GEOG485/css/style.css" rel="stylesheet" type="text/css" media="screen">
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<script type="text/javascript" src="http://openlayers.org/api/OpenLayers.js"></script>
+    <script type="text/javascript">        
         	var lon = -106.6405675;
        		var lat = 35.0473125;
-        	var zoom = 11;
+        	var zoom = 9;
        		var map;
         	var myProjection = new OpenLayers.Projection("EPSG:4326");
         	var OSMlayer;
@@ -25,6 +27,13 @@
             	 );
                         
 		// =========== OSM Map ====================
+             OSMlayer = new OpenLayers.Layer.OSM( "Open Street Map");
+            map.addLayer(OSMlayer);
+            map.setCenter(new OpenLayers.LonLat(lon,lat).transform(
+                myProjection,
+                map.getProjectionObject()
+             ), zoom
+             	);
             gmap = new OpenLayers.Layer.Google(
                 "Google Streets", // the default
                 {numZoomLevels: 20}
@@ -35,13 +44,7 @@
             	);
             map.addLayers([gmap, ghyb]
             	);
-            OSMlayer = new OpenLayers.Layer.OSM( "Open Street Map");
-            map.addLayer(OSMlayer);
-            map.setCenter(new OpenLayers.LonLat(lon,lat).transform(
-                myProjection,
-                map.getProjectionObject()
-             ), zoom
-             	);
+           
              	
  		// =============== WMS (layer) ============
 Layers.USGSImagery = new OpenLayers.Layer.WMS("WMS - USGS Topo",
@@ -84,7 +87,7 @@ Layers.clovisshp = new OpenLayers.Layer.WMS("Clovis Land Use",
       "http://geog485.unm.edu:8080/geoserver/s_cedillos/wms",
       {
       layers: "clovisshp",
-      transparent: false
+      transparent: true
       }, {
       singleTile: true
     });
@@ -108,8 +111,9 @@ Layers.clovisshp = new OpenLayers.Layer.WMS("Clovis Land Use",
         #map {width:90%; height:100%}
     </style>
   </head>
-  <h3>Please create a final OpenLayers mapping client that displays the GerServer-based Styled WMS layers that you created for Deep Dives 3 & 4, focusing on the goals that were laid out in Deep Dive 3. Include in your mapping client a narrative description (a paragraph or two, aimed at a novice user coming to your page for the first time) of the goals and data contained within the client.</h3>
-  <div id="map"></div>
   <body onload="init()">
+  <h3>Please create a final OpenLayers mapping client that displays the GerServer-based Styled WMS layers that you created for Deep Dives 3 & 4, focusing on the goals that were laid out in Deep Dive 3. Include in your mapping client a narrative description (a paragraph or two, aimed at a novice user coming to your page for the first time) of the goals and data contained within the client.</h3>
+  <br>Here is an overview of places New Mexicans have populated and used the landscape. In a specific area of Clovis, New Mexico, much of the land is actually used for agriculture. You can toggle layers by activiating the "+" symbol on the right side of the map. It was difficult to colorize the Land Use layer for Clovis, but you can see how she shapes follow the contours of the landscape.
+  <div id="map"></div>
    </body>
 </html>
