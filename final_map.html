@@ -59,30 +59,30 @@ Layers.A6 = new OpenLayers.Layer.WMS("WMS - 35106-A6.tif",
       "http://geog485.unm.edu:8080/geoserver/s_cedillos/wms",
       {
       layers: "35106-A6",
-      transparent: false
+      transparent: true
       }, {
       singleTile: true
     });
     map.addLayer(Layers.A6) ;
-Layers.A5_CONT = new OpenLayers.Layer.WFS("WFS - 35106-A5_CONT.shp",
+Layers.A5_CONT = new OpenLayers.Layer.WMS("WMS - 35106-A5_CONT.shp",
       "http://geog485.unm.edu:8080/geoserver/s_cedillos/wms",
       {
       layers: "35106-A5_CONT",
-      transparent: false
+      transparent: true
       }, {
       singleTile: true
     });
     map.addLayer(Layers.A5_CONT) ;
-Layers.A6_CONT = new OpenLayers.Layer.WFS("WFS - 35106-A6_CONT.shp",
+Layers.A6_CONT = new OpenLayers.Layer.WMS("WMS - 35106-A6_CONT.shp",
       "http://geog485.unm.edu:8080/geoserver/s_cedillos/wms",
       {
       layers: "35106-A6_CONT",
-      transparent: false
+      transparent: true
       }, {
       singleTile: true
     });
     map.addLayer(Layers.A6_CONT) ; 
-Layers.tgr2006 = new OpenLayers.Layer.WFS("WFS - tgr2006se_bern_lka.shp",
+Layers.tgr2006 = new OpenLayers.Layer.WMS("WMS - tgr2006se_bern_lka.shp",
       "http://geog485.unm.edu:8080/geoserver/s_cedillos/wms",
       {
       layers: "tgr2006se_bern_lka",
@@ -90,7 +90,7 @@ Layers.tgr2006 = new OpenLayers.Layer.WFS("WFS - tgr2006se_bern_lka.shp",
       }, {
       singleTile: true
     });
-    map.addLayer(Layers.tgr2006) ;
+    map.addLayer(Layers.tgr2006) ; 
          	
            	
            	
@@ -114,8 +114,71 @@ Layers.tgr2006 = new OpenLayers.Layer.WFS("WFS - tgr2006se_bern_lka.shp",
   <br>
     Elisa Cedillos<br>
   	May 14 2014<br>
-  <h1>Final Map</h1>
-  	<h2>Here is the Final Map</h2>
+   <h1>Final</h1>
+  	<h2>Question 1</h2>
+  		<h3>Acquire, process, and understand the data for the exam:
+  		<br>Provide the first 5 lines of the output from gdalinfo or ogrinfo for each of the datasets.</h3>
+    		<ul>
+    		<li>35106-A5.tif
+    		<br><img src="./final_screen1.png"></li>
+  				<br>
+  				<br>
+    		<li>35106-A6.tif
+    		<br><img src="./final_screen2.png"></li>
+    			<br>
+  				<br>
+    		<li>35106-A5_CONT.shp
+    		<br><img src="./final_screen3.png"></li>
+    			<br>
+  				<br>
+    		<li>35106-A6_CONT.shp
+    		<br><img src="./final_screen4.png"></li>
+    			<br>
+  				<br>
+    		<li>tgr2006se_bern_lka.shp
+    		<br><img src="./final_screen5.png"></li>
+    		</ul>
+    <h2>Question 2</h2>
+    	<h3>Add the data to GeoServer, create stores and layers
+    	<br>Create one new “layer” for each of the stores. Include a screenshot of each of the ﬁve new layers from the GeoServer “Layer Preview” tool in your writeup</h3>
+    		<ul>
+    		<li>35106-A5
+    		<br><img src="./final_screen6.png" width="550"></li>	
+  				<br>
+  				<br>
+    		<li>35106-A6
+    		<br><img src="./final_screen7.png" width="550"></li>
+    		  	<br>
+  				<br>
+    		<li>35106-A5_CONT
+    		<br><img src="./final_screen8.png" width="550"></li>
+    			<br>
+  				<br>
+    		<li>35106-A6_CONT
+    		<br><img src="./final_screen9.png" width="550"></li>
+    			<br>
+  				<br>
+    		<li>tgr2006se_bern_lka
+    		<br><img src="./final_screen10.png" width="550"></li>
+    		</ul>
+    <h2>Question 3</h2>
+    	<h3>Display any three of the GeoServer hosted layers in QGIS or ArcGIS (as a WMS layer).
+    	<br>Include screenshots of each of the three layers in your writeup.
+    		<ul>
+    		<li>35106-A5
+    		<br><img src="./final_screen11.png" width="550"></li>	
+  
+    		<li>35106-A6
+    		<br><img src="./final_screen12.png" width="550"></li>
+    		
+    		<li>tgr2006se_bern_lka
+    		<br><img src="./final_screen13.png" width="550"></li>
+    <h2>Question 4</h2>
+    	<h3>Create a new OpenLayers web mapping client:  Include each of the five layers that you created in GeoServer in the layer picker in your mapping
+client.
+    	<br>Embed the client in your ﬁnal exam web page.</h3>
+    	<br>
+    	<br>
     <div id="map"></div>    
   </body>
 </html>
