@@ -1,9 +1,115 @@
 <!DOCTYPE html>
 <head>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-    <title>Milestone 11</title>
-   <link href="../GEOG485/css/style.css" rel="stylesheet" type="text/css" media="screen">
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <title>Milestone 13</title>
+		<link href="../GEOG485/css/style.css" rel="stylesheet" type="text/css" media="screen">
+      <script type="text/javascript">        
+        	var lon = -106.6405675;
+       		var lat = 35.0473125;
+        	var zoom = 11;
+       		var map;
+        	var myProjection = new OpenLayers.Projection("EPSG:4326");
+        	var OSMlayer;
+        	var gmap, ghyb;
+        	var Layers = new Object();
+        	
+
+		// =============== Initialization function ===================
+        function init(){
+            map = new OpenLayers.Map( 'map',
+            	{projection:myProjection,
+            	maxExtent: new OpenLayers.Bounds(-20037508, -20037508,
+				20037508, 20037508.34),
+				maxResolution: 156543.0339,
+				units: 'm'}
+            	 );
+                        
+		// =========== OSM Map ====================
+            gmap = new OpenLayers.Layer.Google(
+                "Google Streets", // the default
+                {numZoomLevels: 20}
+            	);
+            ghyb = new OpenLayers.Layer.Google(
+                "Google Hybrid",
+                {type: google.maps.MapTypeId.HYBRID, numZoomLevels: 20}
+            	);
+            map.addLayers([gmap, ghyb]
+            	);
+            OSMlayer = new OpenLayers.Layer.OSM( "Open Street Map");
+            map.addLayer(OSMlayer);
+            map.setCenter(new OpenLayers.LonLat(lon,lat).transform(
+                myProjection,
+                map.getProjectionObject()
+             ), zoom
+             	);
+             	
+ 		// =============== WMS (layer) ============
+Layers.USGSImagery = new OpenLayers.Layer.WMS("WMS - USGS Topo",
+      "http://basemap.nationalmap.gov/arcgis/services/USGSImageryTopo/MapServer/WmsServer?",
+      {
+      layers: "0",
+      transparent: true
+      }, {
+      singleTile: true
+    });
+    map.addLayer(Layers.USGSImagery) ;
+Layers.hist09 = new OpenLayers.Layer.WMS("NM Historical Places",
+      "http://geog485.unm.edu:8080/geoserver/s_cedillos/wms",
+      {
+      layers: "gnis_nm_hist09",
+      transparent: true
+      }, {
+      singleTile: true
+    });
+    map.addLayer(Layers.hist09) ;
+Layers.poppl09 = new OpenLayers.Layer.WMS("NM Populated Places",
+      "http://geog485.unm.edu:8080/geoserver/s_cedillos/wms",
+      {
+      layers: "gnis_nm_poppl09",
+      transparent: true
+      }, {
+      singleTile: true
+    });
+    map.addLayer(Layers.poppl09) ;
+Layers.manoil09 = new OpenLayers.Layer.WMS("NM Manmade Structures/Oil Wells",
+      "http://geog485.unm.edu:8080/geoserver/s_cedillos/wms",
+      {
+      layers: "gnis_nm_manoil09",
+      transparent: true
+      }, {
+      singleTile: true
+    });
+    map.addLayer(Layers.manoil09) ; 
+Layers.clovisshp = new OpenLayers.Layer.WMS("Clovis Land Use",
+      "http://geog485.unm.edu:8080/geoserver/s_cedillos/wms",
+      {
+      layers: "clovisshp",
+      transparent: false
+      }, {
+      singleTile: true
+    });
+    map.addLayer(Layers.clovisshp) ; 
+         	
+           	
+           	
+          
+
+           			map.addControl(new OpenLayers.Control.LayerSwitcher() );
+        		    map.addControl(new OpenLayers.Control.MousePosition() );
+        		    
+
+            }
+          
+            
+        // =============== End of Initialization Function ============
+        
+   	</script>
+	<style type="text/css">
+        #map {width:90%; height:100%}
+    </style>
   </head>
-  <body>
+  <h3>Please create a final OpenLayers mapping client that displays the GerServer-based Styled WMS layers that you created for Deep Dives 3 & 4, focusing on the goals that were laid out in Deep Dive 3. Include in your mapping client a narrative description (a paragraph or two, aimed at a novice user coming to your page for the first time) of the goals and data contained within the client.</h3>
+  <div id="map"></div>
+  <body onload="init()">
    </body>
 </html>

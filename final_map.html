@@ -86,12 +86,32 @@ Layers.tgr2006 = new OpenLayers.Layer.WMS("WMS - tgr2006se_bern_lka.shp",
       "http://geog485.unm.edu:8080/geoserver/s_cedillos/wms",
       {
       layers: "tgr2006se_bern_lka",
-      transparent: false
+      transparent: true
       }, {
       singleTile: true
     });
     map.addLayer(Layers.tgr2006) ; 
-         	
+Layers.A6_CONT_style = new OpenLayers.Layer.WMS("WMS - 35106-A6_CONT.shp",
+      "http://geog485.unm.edu:8080/geoserver/s_cedillos/wms",
+      {
+      layers: "35106-A6_CONT",
+      styles: "Fstyle_2",
+      transparent: true
+      }, {
+      singleTile: true
+    });
+    map.addLayer(Layers.A6_CONT_style) ; 
+Layers.tgr2006 = new OpenLayers.Layer.WMS("WMS - tgr2006se_bern_lka.shp",
+      "http://geog485.unm.edu:8080/geoserver/s_cedillos/wms",
+      {
+      layers: "tgr2006se_bern_lka",
+      styles: "Fstyle_2",
+      transparent: true,
+      
+      }, {
+      singleTile: true
+    });
+    map.addLayer(Layers.tgr2006_style) ; 
            	
            	
           
@@ -179,6 +199,17 @@ client.
     	<br>Embed the client in your ﬁnal exam web page.</h3>
     	<br>
     	<br>
-    <div id="map"></div>    
+    <div id="map"></div>  
+    <h2>Question 5</h2>
+    	<h3>Create and add styled layers to your OpenLayers client. Add these two styled layers to the mapping client generated for question 4. Provide the layer
+names for your customized layers in your writeup.
+		<br>
+			<ul>
+			<li>Custom styled layer 1: 35106-A6_cont (styled)
+				<br>style: Fstyle_1 (blue line with blue fill)
+				</li>
+			<li>Custom styled layer 2: tgr2006se_bern_lka (styled)
+				<br>style: Fstyle_2 (black line)
+				</li>  
   </body>
 </html>
