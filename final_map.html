@@ -6,10 +6,9 @@
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 	<script type="text/javascript" src="http://openlayers.org/api/OpenLayers.js"></script>
     <script type="text/javascript">        
-
-        	var lon = -122.4149391;
-       		var lat = 37.7829634;
-        	var zoom = 11;
+        	var lon = -106.6405675;
+       		var lat = 35.0473125;
+        	var zoom = 9;
        		var map;
         	var myProjection = new OpenLayers.Projection("EPSG:4326");
         	var OSMlayer;
@@ -60,7 +59,7 @@ Layers.A6 = new OpenLayers.Layer.WMS("WMS - 35106-A6.tif",
       "http://geog485.unm.edu:8080/geoserver/s_cedillos/wms",
       {
       layers: "35106-A6",
-      transparent: true
+      transparent: false
       }, {
       singleTile: true
     });
@@ -69,7 +68,7 @@ Layers.A5_CONT = new OpenLayers.Layer.WFS("WFS - 35106-A5_CONT.shp",
       "http://geog485.unm.edu:8080/geoserver/s_cedillos/wms",
       {
       layers: "35106-A5_CONT",
-      transparent: true
+      transparent: false
       }, {
       singleTile: true
     });
@@ -78,7 +77,7 @@ Layers.A6_CONT = new OpenLayers.Layer.WFS("WFS - 35106-A6_CONT.shp",
       "http://geog485.unm.edu:8080/geoserver/s_cedillos/wms",
       {
       layers: "35106-A6_CONT",
-      transparent: true
+      transparent: false
       }, {
       singleTile: true
     });
@@ -87,7 +86,7 @@ Layers.tgr2006 = new OpenLayers.Layer.WFS("WFS - tgr2006se_bern_lka.shp",
       "http://geog485.unm.edu:8080/geoserver/s_cedillos/wms",
       {
       layers: "tgr2006se_bern_lka",
-      transparent: true
+      transparent: false
       }, {
       singleTile: true
     });
