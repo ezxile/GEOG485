@@ -27,6 +27,13 @@
             	 );
                         
 		// =========== OSM Map ====================
+            OSMlayer = new OpenLayers.Layer.OSM( "Open Street Map");
+            map.addLayer(OSMlayer);
+            map.setCenter(new OpenLayers.LonLat(lon,lat).transform(
+                myProjection,
+                map.getProjectionObject()
+             ), zoom
+             	);
             gmap = new OpenLayers.Layer.Google(
                 "Google Streets", // the default
                 {numZoomLevels: 20}
@@ -37,13 +44,7 @@
             	);
             map.addLayers([gmap, ghyb]
             	);
-            OSMlayer = new OpenLayers.Layer.OSM( "Open Street Map");
-            map.addLayer(OSMlayer);
-            map.setCenter(new OpenLayers.LonLat(lon,lat).transform(
-                myProjection,
-                map.getProjectionObject()
-             ), zoom
-             	);
+            
              	
  		// =============== WMS (layer) ============
 Layers.A5 = new OpenLayers.Layer.WMS("WMS - 35106-A5.tif",
@@ -113,9 +114,6 @@ Layers.tgr2006 = new OpenLayers.Layer.WMS("WMS - tgr2006se_bern_lka.shp",
     });
     map.addLayer(Layers.tgr2006_style) ; 
            	
-           	
-          
-
            			map.addControl(new OpenLayers.Control.LayerSwitcher() );
         		    map.addControl(new OpenLayers.Control.MousePosition() );
         		    
@@ -202,7 +200,7 @@ client.
     <div id="map"></div>  
     <h2>Question 5</h2>
     	<h3>Create and add styled layers to your OpenLayers client. Add these two styled layers to the mapping client generated for question 4. Provide the layer
-names for your customized layers in your writeup.
+names for your customized layers in your writeup.</h3>
 		<br>
 			<ul>
 			<li>Custom styled layer 1: 35106-A6_cont (styled)
