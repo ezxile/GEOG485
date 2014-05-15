@@ -44,7 +44,8 @@
             	);
             map.addLayers([gmap, ghyb]
             	);
-            
+        	map.addControl(new OpenLayers.Control.LayerSwitcher() );
+        	map.addControl(new OpenLayers.Control.MousePosition() );
              	
  		// =============== WMS (layer) ============
 Layers.A5 = new OpenLayers.Layer.WMS("WMS - 35106-A5.tif",
@@ -114,8 +115,7 @@ Layers.tgr2006 = new OpenLayers.Layer.WMS("WMS - tgr2006se_bern_lka.shp",
     });
     map.addLayer(Layers.tgr2006_style) ; 
            	
-           			map.addControl(new OpenLayers.Control.LayerSwitcher() );
-        		    map.addControl(new OpenLayers.Control.MousePosition() );
+
         		    
 
             }
@@ -203,11 +203,13 @@ client.
 names for your customized layers in your writeup.</h3>
 		<br>
 			<ul>
-			<li>Custom styled layer 1: 35106-A6_cont (styled)
-				<br>style: Fstyle_1 (blue line with blue fill)
+			<li>Styled layer 1: 35106-A6_cont
+				<br>Style: Fstyle_1 (blue line with blue fill)
 				</li>
-			<li>Custom styled layer 2: tgr2006se_bern_lka (styled)
-				<br>style: Fstyle_2 (black line)
+				<br>
+				<br>
+			<li>Styled layer 2: tgr2006se_bern_lka
+				<br>Style: Fstyle_2 (black line)
 				</li>  
   </body>
 </html>
