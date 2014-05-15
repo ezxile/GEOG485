@@ -8,7 +8,7 @@
     <script type="text/javascript">        
         	var lon = -106.6405675;
        		var lat = 35.0473125;
-        	var zoom = 9;
+        	var zoom = 7;
        		var map;
         	var myProjection = new OpenLayers.Projection("EPSG:4326");
         	var OSMlayer;
@@ -51,7 +51,8 @@ Layers.USGSImagery = new OpenLayers.Layer.WMS("WMS - USGS Topo",
       "http://basemap.nationalmap.gov/arcgis/services/USGSImageryTopo/MapServer/WmsServer?",
       {
       layers: "0",
-      transparent: true
+      
+      transparent: false
       }, {
       singleTile: true
     });
@@ -60,6 +61,7 @@ Layers.hist09 = new OpenLayers.Layer.WMS("NM Historical Places",
       "http://geog485.unm.edu:8080/geoserver/s_cedillos/wms",
       {
       layers: "gnis_nm_hist09",
+      styles: "historical_features",
       transparent: true
       }, {
       singleTile: true
@@ -69,6 +71,7 @@ Layers.poppl09 = new OpenLayers.Layer.WMS("NM Populated Places",
       "http://geog485.unm.edu:8080/geoserver/s_cedillos/wms",
       {
       layers: "gnis_nm_poppl09",
+      styles: "populated_places",
       transparent: true
       }, {
       singleTile: true
@@ -78,6 +81,7 @@ Layers.manoil09 = new OpenLayers.Layer.WMS("NM Manmade Structures/Oil Wells",
       "http://geog485.unm.edu:8080/geoserver/s_cedillos/wms",
       {
       layers: "gnis_nm_manoil09",
+      styles: "manmade_features",
       transparent: true
       }, {
       singleTile: true
@@ -87,6 +91,7 @@ Layers.clovisshp = new OpenLayers.Layer.WMS("Clovis Land Use",
       "http://geog485.unm.edu:8080/geoserver/s_cedillos/wms",
       {
       layers: "clovisshp",
+      styles: "clovis_opaq",
       transparent: true
       }, {
       singleTile: true
